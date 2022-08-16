@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="../CSS/fileName.css" >
+	<link rel="icon" type="image/x-icon" href="../Images/Icons/favicon-32x32.png">
+	<title>Basic HTML Reference Code</Title>
+	<meta chraset="utf-8">
+	<style></style>
+</head>
+<body>
+	<header></header>
+	<nav>
+		<!--Menu with drop down list-->
+		<link rel="stylesheet" type="text/css" href="../CSS/menu_rollover.css">
+		<div class="wrap">
+			<div class="menu-container">
+				<ul class="menu">
+					<li>Home</li>
+					<li>About</li>
+					<li>Portfolio
+						<ul class="submenu">
+							<li>Page 1</li>
+							<li>Page 2</li>
+							<li>Page 3</li>
+							<li>Page 4</li>
+						</ul>
+					</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main>
+		<!--Call JavaScript code held in another file
+		<script src="HelloWorld.js">
+		</script>
+		-->
+
+		<!--ID and HTML Fonts-->
+		<br>
+		<br>
+		<p id="paragraph1"><font color= #008B8B face= "Roboto" size="6">Paragraph 1: <font size="4">Hex Color #008B8B</font> <font size="2">"darkcyan"</font></font></p>
+		
+		<!--HTML Text elements-->
+		<style>
+			#textshadow {
+				text-shadow: 2px 2px #87538b;
+				text-decoration-line: underline;
+				text-decoration-style: wavy;
+				font-weight: bold;
+			}
+		</style>
+		<p><span id="textshadow">Text elements</span>
+		<br>
+		<b>Bold</b>, <i>italic</i>, <strong>strong</strong>, and <u>underline</u>.
+		</p>
+		<p>Space<br>
+		&nbsp;&nbsp; is <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight:bold;color:teal;"> big</span>.
+		</p>
+		<p>Her eyes were <span style="color:#7BC36C;font-weight:bold;">green</span>, like apples.</p>
+				
+		<!--Links-->
+		<p>Implicit Link: <a href="../Images/dog.jpg">Check out this fluff!</a>
+		<br>
+		Explicit Link: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBpH8pvuU7jrU289AymDtwgOUE4-uO1es0w&usqp=CAU">
+		Do not disturb</a>
+		</p>	
+
+		<!--Image with alt text-->
+		<img height="300px" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1_Ju2SLrbL42M59kkd9ufsHw.jpg?auto=format&q=60&fit=max&w=930" alt="The Golden Ratio in nature">
+		
+		<!--pictures in grid-->
+		<style>
+			#img_grid {
+				background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+				background-size: contain;
+				border: 2px solid black;
+				border-radius: 15px;
+				box-shadow: 2px 2px 4px gray;
+				padding: 20px;
+				width: 60%;
+				margin: 0 auto;
+			}
+			.row {
+				display: flex;
+			}
+			.column {
+				flex: 50%;
+			}
+			.column img{
+				height: 100px;
+			}
+			/* Other ways to select the images in the photo containers: 
+			section img {}
+			.column:child(-n+4) img {}
+			*/
+		</style>
+		<section id="img_grid">
+			<!--photo container 1-->
+			<div class="row">
+				<!--left img-->
+				<div class="column">
+					<img src= "../Images/htmlproject1.jpg" alt="Crown Royal Gown">
+					<div>
+						<h3>Submitted by: John Smith</h3>
+					</div>
+				</div>
+				<!--right img-->
+				<div class="column">
+					<img src="../Images/htmlproject2.jpg" alt="Ghost Doggie">
+					<div>
+						<h3>Submitted by: Don el Dog</h3>
+					</div>
+				</div>
+			</div>
+			<!--END photo container 1-->
+			
+			<!--photo container 2-->
+			<div class="row">
+				<!--left image-->
+				<div class="column">
+					<img src="../Images/htmlproject3.jpg" alt="Pretty in Pink">
+					<div>
+						<h3>Submitted by: Lolita</h3>
+					</div>
+				</div>
+				<!--right img-->
+				<div class="column">
+					<img src="../Images/htmlproject4.jpg" alt="Summer Dress">
+					<div>
+						<h3>Submitted by: Bo Peep</h3>
+					</div>
+				</div>
+			</div>
+			<!--END photo container 2-->
+		</section>
+		<!--END pictures section-->
+
+		<!--Blockquote tag-->
+		<div>
+			<style>
+				blockquote {
+				border-radius: 20px;
+				border: 3px solid silver;
+				padding: 5px 5px 5px 5px;
+				}
+			</style>
+			<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
+				“The bridge will only take you halfway there, to those mysterious lands you long to see. 
+				<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
+				<br>So come and walk awhile with me and share the twisting trails and wondrous worlds I've known. 
+				<br>But this bridge will only take you halfway there. The last few steps you have to take alone.”
+				<br>
+				<br>― Shel Silverstein
+			</blockquote>
+		</div>
+		
+		<!--Embed video-->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/uD4izuDMUQA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+		
+		<!--Table-->
+		<style>
+			table {
+				border: 3px solid purple;
+				width: 100%;
+				box-shadow: 2px 2px 10px pink;
+			}
+			td:hover {
+				background-color: #94CCEC;
+				color: blue;
+			}
+			tr th {
+				background-color: #D1A1FC;
+				color: white;
+				font-weight: bold;
+			}
+			tr td {
+				background-color:;
+				color:black;
+				text-align: center;
+			}
+			td:nth-of-type(1) {
+				font-weight: bold;
+			}
+			#column1 {
+				width: ;
+				background-color: palegoldenrod;
+				font-weight: bold;
+			}
+			#column2 {
+				width:;
+				background-color: palegreen;
+			}
+			#column3 {
+				width:;
+				background-color: paleturquoise;
+			}
+			#column4 {
+				width:;
+				background-color: rgb(241, 196, 211);
+			}
+			
+		</style>
+		<table>
+			<colgroup>
+				<col id="column1">
+				<col id="column2">
+				<col id="column3">
+				<col id="column4">
+			</colgroup>
+			<tr>
+				<th>FRUIT</th>
+				<th>Season</th>
+				<th>Where to Pick</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Blueberry</td>
+				<td>July</td>
+				<td>Frankton Rd, Hood River</td>
+				<td>Perfect for blemon pies!</td>
+			</tr>
+			<tr>
+				<td>Raspberry</td>
+				<td>June</td>
+				<td>Gorge White House, Hood River</td>
+				<td>Early summer treats.</td>
+			</tr>
+			<tr>
+				<td>Blackberry</td>
+				<td>August</td>
+				<td>Literally everywhere</td>
+				<td>Wear long sleves when picking!</td>
+			</tr>
+			<tr>
+				<td>Cherry</td>
+				<td>June</td>
+				<td>Mosier or Dell</td>
+				<td>My favorite!</td>
+			</tr>
+		</table>
+		
+		<!-- Ordered List adds numbers by default-->
+		<style>
+		ol {
+			list-style-type: upper-roman;
+		}
+		ul{
+			list-style-type: square;
+		}
+		</style>
+		<h2>Ordered List with Numbers</h2>
+		<ol>
+			<li>Spring</li>
+			<li>Summer</li>
+			<li>Fall</li>
+			<li>Winter</li>
+		</ol>
+		<!-- Unordered List adds default bullet points-->
+		<h2>Unordered List with Bullet Points</h2>
+		<ul>
+			<li>Jams</li>
+			<li>Pies</li>
+			<li>Tarts</li>
+			<li>Cakes</li>
+		</ul>
+		
+		<!--Form and Input-->
+		<form action="" method="get">
+			First name: <input type="text" name="First name"><br>
+			Last name: <input type="text" name="Last name"><br>
+			<input type="submit" value="Submit">
+		</form>
+		
+		<!--Article and Details Tag-->
+		<article>
+			<details>
+				<summary>Drop Down Item</summary>
+				<p>Contents that show up when clicked- can be other elements.</p>
+				<ul>
+					<li>You can even add</li>
+					<li>multiple bullet points</li>
+				</ul>
+			</details>
+			<details>
+				<summary>This is a great way to make lists</summary>
+				<p>Or is it?</p>
+				<p>Every drop down must be a new details tag</p>
+			</details>
+		</article>
+		
+		<!--Time and Datetime Tag-->
+		<p>The General Store is open every day from <time>9 a.m.</time> until <time>7 p.m.</time>.<br>
+		Please note that we are closed on <time datetime="12-25">Christmas</time> and <time datetime="11-24">Thanksgiving</time>. Thank you.</p>
+
+		<!--Bookmark using #id-->
+		<p>Page Bookmark:
+		<br>Jump back to <a href="#paragraph1">Paragraph 1</a> by clicking the link.</p>
+	
+		<!--
+		Animation--------------------------------------
+		-->
+		<style>
+			h1 {
+			color: rgba(0, 141, 165,1);
+			margin-left: 100px;
+			text-shadow: 1px .5px 4px rgba(0,0,0,.6);
+			}
+			.container {
+				width:450px;
+				height: 450px;
+				background-color: #faebd7;
+				border: 2px solid black; 
+				border-radius: 5%;
+				box-shadow:3px .5px 4px rgba(0, 141, 165,1);
+			}
+
+			/*SELECT ALL SQUARES IN THE ARRAY*/
+			.container .squares:nth-child(-n+4) {
+				background-image: url(../Images/Icons/smile1.png);
+				color: #fff;
+				float: left;
+				width: 100px;
+				height: 100px;
+				margin: 5px;
+				border: 1px solid black;
+				border-radius: 25%;
+				cursor: pointer;
+				transition: transform .5s ease-in-out;
+			}
+			/*SELECT ALL SQUARES PARAGRAPHS IN THE ARRAY*/
+			.squares:nth-child(-n+4) p {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 1.5em;
+				font-weight: 900;
+				text-align: center;
+				margin: 0 auto;
+				text-shadow: 2px 1px 4px rgba(0,0,0,.6);
+			}
+			/*INDIVIDUALLY SELECT A SQUARE IN THE ARRAY*/
+			.squares:nth-child(1) {
+				background: #2420ff;
+			}
+			.squares:nth-child(2) {
+				background: #ab3fdd;
+			}
+			.squares:nth-child(3) {
+				background: #ae163e;
+			}
+			.squares:nth-child(4) {
+				background: #00b200;
+			}
+			/*HOVER, TRANSLATE & TRANSFROM EFFECTS*/
+			.container .squares:nth-child(-n+4):hover {
+				background-image: url("../Images/Icons/smile2.png");
+				transform: scale(.5);
+				animation-name: race;
+				animation-duration: 2.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: cubic-bezier(2.5,.2,.3,2);
+			}
+			.squares:nth-child(1):hover {
+				background: #13b4ff;
+			}
+			.squares:nth-child(2):hover {
+				background: #d861af;
+			}
+			.squares:nth-child(3):hover {
+				background: #81205f;
+			}
+			.squares:nth-child(4):hover {
+				background: #9deb0c;
+			}
+
+			/*ANIMATION EFFECTS*/
+			@keyframes race {
+				0%, 100% {
+					transform: translateY(0px);
+					background-image: url("../Images/Icons/smile2.png");
+				}
+				50% {
+					transform: translateY(300px);
+				}
+			}
+		</style>
+		<div>
+			<h1>CSS Animation Demo</h1>
+		</div>
+
+		<div class="container">
+			<div class="squares">
+				<p>Box 1</p>
+			</div>
+
+			<div class="squares">
+				<p>Box 2</p>
+			</div>
+
+			<div class="squares">
+				<p>Box 3</p>
+			</div>
+
+			<div class="squares">
+				<p>Box 4</p>
+			</div>
+		</div>
+		<!--
+		END Animation------------------------------------
+		-->
+
+	</main>
+	<footer></footer>
+</body>
+</html>

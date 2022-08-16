@@ -1,0 +1,51 @@
+h1 {
+	text-shadow: 2px 2px 10px gray;
+}
+h2 {
+	text-shadow: .5px .5px rgb(181, 255, 168);
+}
+
+/*Table Style CSS Selector and Properties*/
+table {
+	border: 3px solid purple;
+	box-shadow: 2px 2px 10px pink;
+}
+td:hover {
+	background-color: #94CCEC;
+	color: blue;
+}
+tr th {
+	background-color: #D1A1FC;
+	color: white;
+	font-weight: bold;
+}
+tr td {
+	background-color:;
+	color:black;
+	text-align: center;
+}
+#column1 {
+	width: ;
+	background-color: palegoldenrod;
+}
+#column2 {
+	width:;
+	background-color: palegreen;
+}
+#column3 {
+	width:;
+	background-color: paleturquoise;
+}
+#column4 {
+	width:;
+	background-color: rgb(241, 196, 211);
+}
+
+
+/*List Style CSS Selector and Properties*/
+ol {
+	list-style-type: upper-roman;
+}
+ul{
+	list-style-type: square;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HTML Project</title>
+	<link rel="stylesheet" type="text/css" href="CSS/OnePageWebsite.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<!--nav element-->
+	<nav>
+		<button type="button"><a href= #communitytable>Community Craft Table</a></button> |
+		<button type="button"><a href= #videosection>Tutorials</a></button> | 
+		<button type="button"><a href= #signup>Email Sign Up</a></button>
+	</nav>
+	<!--END nav element-->
+	
+	<!--home page section with header tag-->
+	<header>
+		<div>
+			<p>Gallery</p>
+		</div>
+	</header>
+	<!--END home page section-->
+	
+	<main>
+		<div>
+			<h1>Community Craft Table</h1>
+			<p>Share your completed craft projects with the rest of the community. 
+			<br>Or check out others' work for inspiration!</p>
+		</div>
+		
+		<!--pictures section-->
+		<section id="communitytable">
+			<!--photo container 1-->
+			<div class="row">
+				<!--left img-->
+				<div class="column">
+					<img src= "./Images/htmlproject1.jpg" alt="Crown Royal Gown">
+					<div>
+						<h3>Submitted by: John Smith</h3>
+					</div>
+				</div>
+				<!--right img-->
+				<div class="column">
+					<img src="./Images/htmlproject2.jpg" alt="Ghost Doggie">
+					<div>
+						<h3>Submitted by: Don Dog</h3>
+					</div>
+				</div>
+			</div>
+			<!--END photo container 1-->
+			
+			<!--photo container 2-->
+			<div class="row">
+				<!--left image-->
+				<div class="column">
+					<img src="./Images/htmlproject3.jpg" alt="Pretty in Pink">
+					<div>
+						<h3>Submitted by: Lolita</h3>
+					</div>
+				</div>
+				<!--right img-->
+				<div class="column">
+					<img src="./Images/htmlproject4.jpg" alt="Summer Dress">
+					<div>
+						<h3>Submitted by: Bo Peep</h3>
+					</div>
+				</div>
+			</div>
+			<!--END photo container 2-->
+		</section>
+		<!--END pictures section-->
+		
+		<!--video section-->
+		<section id="videosection">
+			<div>
+				<h1>Don't know where to start?</h1>
+				<p>YouTube is a great learning resource! Here is a beginners guide to help you get started.</p>
+				<div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/oD_KpZm7OaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
+		<!--ENd video section-->
+		
+		<div>
+			<blockquote>Take your needle, my child, and work at your pattern; it will come out a rose by and by. 
+			<br>Life is like that - one stitch at a time taken patiently and the pattern will come out all right like the embroidery.
+			<br>
+			<br>-<em> Oliver Wendell Holmes Sr.</em>
+			</blockquote>
+		</div>
+	</main>
+	<footer>
+		<!--contact form-->
+		<div id="signup">
+			<h1>Sign up for the mailing list...</h1>
+			<form action="" method="post"> 
+				First Name: <input type="text" name="First name"><br>
+				Last Name: <input type="text" name="Last name"><br>
+				Email: <input type="text" name="Email"><br>
+				<input type="submit" name="Submit">
+			</form>
+		</div>
+		<!--END contact form-->
+	</footer>
+</body>
+</html>

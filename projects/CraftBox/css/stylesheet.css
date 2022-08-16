@@ -1,0 +1,93 @@
+/*Stylesheet for Craftbox: index.html*/
+.wrap {
+	background: rgb(204, 204, 204, .75);
+	top: 0;
+	left: 0;
+	height: auto;
+	width: 100%;
+	position: fixed;
+} 
+/*Fix menu to top edge of the screen*/
+.menucontainer {
+	top:0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	background-color: rgb(204, 204, 204, .75);
+	box-shadow: 2px 2px 4px grey;
+}
+/*Display elements on same line and remove bullet points*/
+.menu {
+	font: ;
+	text-align: center;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*Display submenu elements as inline-block*/
+.menu li {
+	color: black;
+	display: inline-block;
+	margin-right: -2px;
+	position: relative;
+	padding: 12px 40px;
+	border: 1px solid white;
+	border-radius: 2px;
+	background-color: lemonchiffon;
+	cursor: pointer;
+}
+/*Change color on hover*/
+.menu li:hover {
+	background-color: rgb(255, 237, 135);
+	color:rgb(238, 135, 0);
+}
+/*Show submenu on hover*/
+.menu li:hover ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+/*Hide submenu when not hovered*/
+.submenu {
+	padding: 0;
+	left: 0;
+	position: absolute;
+	top: 43.5px;
+	width: 135px;
+	opacity: 0;
+	visibility: hidden;
+}
+/*Fix glitch of when submenu shows but not hovered*/
+.submenu li {
+	background-color: lemonchiffon;
+	display: block;
+	color: black;
+}
+.submenu li: hover {
+	color: black;
+	background-color: rgb (204,204,204,1);
+}
+/*----------END "Menu Bar" ----------*/
+
+header {
+	background-image: url("../images/KarenPenrozUnsplash.jpg");
+	text-align: center;
+	height: 250px;
+	background-size:cover;
+	background-position: center;	
+	padding: 50px;
+}
+main {
+}
+img {
+	border-radius: 15px;
+	max-height: 200px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding:25px 0 25px 0;
+}

@@ -1,0 +1,64 @@
+.wrap {
+    background: #184352;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+}
+.menu-container {
+    top: 0;
+    left: 0;
+    position: absolute; /*To the top edge of the screen*/
+    width: 100%;
+    background-color: #184352;
+}
+.menu {
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline; /*displays elements on same line, rather than as blcks*/
+    margin: 0;
+    padding: 0;
+    list-style: none; /*removes defaul bullet points*/
+}
+.menu li {
+    color: #B3b3b3;
+    display: inline-block; /*puts li elements side by side*/
+    margin-right: -2px;
+    position: relative; /*position is relative to each element*/
+    padding: 12px 40px;
+    border: 1px solid #9d9fa2;
+    border-radius: 1.5px;
+    background-color: #387593;
+    cursor: pointer;
+}
+.menu li:hover {
+    background-color: #5eafdf;
+    color: #fff;
+}
+/*Show submenu on hover*/
+.menu li:hover ul{
+    display: block; /*"Drop down" effect because elements to revert to blocks -stacked on top of each other*/
+    opacity: 1; /*Whle hovered, opacity is 1 (totally opaque)*/
+    visibility: visible; /*While hovered, drop down menu appears. This also avoids a block-level bug*/
+}
+/*Hide submenu by default, ie when not hovered*/
+.submenu {
+    padding: 0;
+    left: 0;
+    position: absolute;
+    top: 43.5px;
+    width: 125.5px;
+    opacity: 0; /*While not being hovered, drop down menu hides because opacity is 0 (not opaque at all). This also avoids a block-level bug*/
+    visibility: hidden;
+}
+/*When submenu shows, but isn't hovered*/
+.submenu li {
+    background-color: #387593;
+    display: block; /*"Drop down" effect because elements to revert to blocks -stacked on top of each other*/
+    color: #b3b3b3;
+}
+/*Submenu shows AND is hovered*/
+.submenu li:hover {
+    color: #fff;
+    background-color: #eafdf;
+}

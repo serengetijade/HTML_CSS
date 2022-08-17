@@ -6,8 +6,15 @@
 	<title>Photo Package</Title>
 	<meta chraset="utf-8">
 	<style>
-
-
+		.flex-container {
+			display: -webkit-flex;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			border-radius: 8px;
+			margin: 0px auto;
+			background-color: rgba(255, 255, 230,1);
+			box-shadow: 2px 2px 10px 0 rgba(0,0,0,.5), -2px -2px 10px salmon;
 	</style>
 </head>
 <body>
@@ -15,12 +22,34 @@
 	<nav></nav>
 	<main>
 		<!--Photo Container-->
-		<div class="photo-container">
-			<div class="photo">
-				<img src="../Images/htmlproject1.jpg" alt="Nervous Kitty">
-				<div class="photo-overlay">
-					<h3 class="white-head">Click to Enlarge</h3>
-					<p>We have several fluffies being cute daily</p>
+		<div class="flex-container">
+			<div class="photo-container">
+				<div class="photo">
+					<img src="../Images/htmlproject1.jpg" alt="Nervous Kitty">
+					<div class="photo-overlay">
+						<h3 class="white-head">Click to Enlarge</h3>
+						<p>We have several fluffies being cute daily</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="photo-container">
+				<div class="photo">
+					<img src="../Images/htmlproject2.jpg" alt="Doggo">
+					<div class="photo-overlay">
+						<h3 class="white-head">Click to Enlarge</h3>
+						<p>We have several fluffies being cute daily</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="photo-container">
+				<div class="photo">
+					<img src="../Images/htmlproject3.jpg" alt="Kute Kitten">
+					<div class="photo-overlay">
+						<h3 class="white-head">Click to Enlarge</h3>
+						<p>We have several fluffies being cute daily</p>
+					</div>
 				</div>
 			</div>
 		</div>

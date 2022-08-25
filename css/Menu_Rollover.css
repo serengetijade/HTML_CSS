@@ -1,52 +1,51 @@
 /* MENU BAR 1*/
-.navbar {
-}
 .menu-container {
     z-index: 1; /*Puts navbar over other elements*/
-    position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element*/
+    position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element. This is necessary to set the element width to cover 100% of the viewscreen without default spacing.*/
     /*position: fixed;*/ /* Fix menu bar in position so it doesn't move as viewer scrolls*/
     top: 0; /*Positions top edge of this element down from nearest ancestor, in this case: none, so 0 from the top of the screen*/
-    height: auto; /*automatically adjust its height to allow its content to be displayed correctly*/
+    left: 0; /*Positions left edge 0 from the left edge of parent element*/
     width: 100%; /*width relative to the containing block*/
-    opacity: 1; /*Change to make navbar translucent*/
+    height: auto; /*automatically adjust its height to allow its content to be displayed correctly*/
+    opacity: 1; /*Change this to make navbar translucent*/
     background-color: lavender;
     text-align: center; /*Position on page*/
 }
 .menu {
     display: inline; /*displays elements on same line, rather than as blocks*/
-    font: bold 12px/18px sans-serif;
+    padding: 0; /*removes default padding from <ul> and <ol>. Without removing this padding, the menu bar won't position on the page properly*/
     list-style: none; /*removes defaul bullet points*/
-    text-align: centered; /*Ensures each element within .menu has centered contents (so if you change text-align in .menu-container it stays centered here)*/
+    font: bold 12px/18px sans-serif;
+    text-align: center; /*Ensures each element within .menu has centered contents (so if you change text-align in .menu-container it stays centered here)*/
 }
 .menu li {
     position: relative; /*position is relative to its normal position*/
     display: inline-block; /*puts li elements side by side*/
     margin-right: -2px; /*moves the elements closer together*/
     padding: 12px 40px; /*adds padding space around the words*/
-    width: 5vw; /*Set the width for each .menu li element*/
+    width: ; /*Set the same width (or max-width) for each .menu li element*/
     color: black;
     background-color: #387593;
     border: 2px solid greenyellow;
     border-radius: 5px;
-    cursor: pointer; /*Defines the cursor over this element. Note that default over <a> is pointer.*/
-    
+    cursor: pointer; /*Defines the cursor over this element. Note that default over <a> is pointer.*/  
 }
 .menu li:hover {
     background-color: #5eafdf;
     color: #fff;
 }
-
 .menu li:hover ul { /*Show submenu on hover*/
     display: block; /*"Drop down" effect because elements to revert to blocks -stacked on top of each other*/
     opacity: 1;     /*While hovered, opacity is 1 (totally opaque)*/
     visibility: visible; /*While hovered, drop down menu is visible. This also avoids a block-level bug*/
 }
 .submenu { /*Hide submenu by default, ie when not hovered*/
+    z-index: 2; /*Puts submenu over other elements*/
     position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element*/
     padding: 0; /*Removes parent padding*/
     left: 0; /*Removes parent and default positioning and sets left edge 0 from the left edge of parent element*/
     top: 100%; /*Positions top edge of this element down from nearest ancestor*/
-    z-index: 2; /*Puts submenu over other elements*/
+    width: 100%; /*Matches the width of the submenu to that of its parent element*/
     opacity: 0; /*While not being hovered, drop down menu hides because opacity is 0 (not opaque at all). This also avoids a block-level bug*/
     visibility: hidden;
 }
@@ -68,7 +67,6 @@
     transition: transform .5s;  /* Makes the transform effect last .5 seconds */
     text-shadow: 3px 3px 5px pink;
 }
-
 a:link, a:visited {
     color: purple;
 }
@@ -76,8 +74,10 @@ a:link, a:visited {
     text-align: right; /*Position on page*/
 }
 .menu2 ul {
-    list-style: none; /*Removes default bullet points*/
     display: inline; /*Displays an element as an inline element (like <span>). Any height and width properties will have no effect*/
+    padding: 0; /*removes default padding from <ul> and <ol>. Without removing this padding, the menu bar won't position on the page properly*/
+    list-style: none; /*Removes default bullet points*/
+    text-align: center; /*Ensures each element within .menu has centered contents (so if you change text-align in .menu2 it stays centered here)*/
 }
 .menu2 li {
     display: inline-block; /*Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values*/

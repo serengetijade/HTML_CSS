@@ -93,9 +93,9 @@ a:link, a:visited {
     background-color: gainsboro;
 }
 .logo {
-    position: absolute;
-    display: inline;
-    top: 3px;
+    position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element*/
+    display: inline; /*Displays an element as an inline element (like <span>). Any height and width properties will have no effect*/
+    top: 190px; /*Normally, this would be set to 0-5px, but because this example is a second nav bar on a page, it had to be moved down*/
     left: 3px;
 }
 /*END MENU BAR 2*/

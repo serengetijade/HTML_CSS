@@ -11,7 +11,7 @@ a single page website for showing what crafting supplies you have around. It is 
 
 #### [Bootstrap4 Website](https://github.com/serengetijade/HTMLandCSS/tree/main/projects/Bootstrap4Project)
 a companion to the CraftBox website, this was styled using Bootsrap4. It contains several bootstrap components such as a navbar, jumbotron, cards, videos, buttons, a form, and more. 
-
+![Preview of Bootstrap4 Website](https://raw.githubusercontent.com/serengetijade/HTMLandCSS/main/images/readme2.jpg)
 
 ## [REFERENCE CODE LIBRARY](https://github.com/serengetijade/HTMLandCSS/tree/main/html):
 In addition to the projects, there is a small code library that is useful for referencing basic elements and design. 

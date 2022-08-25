@@ -1,64 +1,101 @@
-.wrap {
-    background: #184352;
-    top: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
+/* MENU BAR 1*/
+.navbar {
 }
 .menu-container {
-    top: 0;
-    left: 0;
-    position: absolute; /*To the top edge of the screen*/
-    width: 100%;
-    background-color: #184352;
+    z-index: 1; /*Puts navbar over other elements*/
+    position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element*/
+    /*position: fixed;*/ /* Fix menu bar in position so it doesn't move as viewer scrolls*/
+    top: 0; /*Positions top edge of this element down from nearest ancestor, in this case: none, so 0 from the top of the screen*/
+    height: auto; /*automatically adjust its height to allow its content to be displayed correctly*/
+    width: 100%; /*width relative to the containing block*/
+    opacity: 1; /*Change to make navbar translucent*/
+    background-color: lavender;
+    text-align: center; /*Position on page*/
 }
 .menu {
+    display: inline; /*displays elements on same line, rather than as blocks*/
     font: bold 12px/18px sans-serif;
-    text-align: center;
-    display: inline; /*displays elements on same line, rather than as blcks*/
-    margin: 0;
-    padding: 0;
     list-style: none; /*removes defaul bullet points*/
+    text-align: centered; /*Ensures each element within .menu has centered contents (so if you change text-align in .menu-container it stays centered here)*/
 }
 .menu li {
-    color: #B3b3b3;
+    position: relative; /*position is relative to its normal position*/
     display: inline-block; /*puts li elements side by side*/
-    margin-right: -2px;
-    position: relative; /*position is relative to each element*/
-    padding: 12px 40px;
-    border: 1px solid #9d9fa2;
-    border-radius: 1.5px;
+    margin-right: -2px; /*moves the elements closer together*/
+    padding: 12px 40px; /*adds padding space around the words*/
+    width: 5vw; /*Set the width for each .menu li element*/
+    color: black;
     background-color: #387593;
-    cursor: pointer;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    cursor: pointer; /*Defines the cursor over this element. Note that default over <a> is pointer.*/
+    
 }
 .menu li:hover {
     background-color: #5eafdf;
     color: #fff;
 }
-/*Show submenu on hover*/
-.menu li:hover ul{
+
+.menu li:hover ul { /*Show submenu on hover*/
     display: block; /*"Drop down" effect because elements to revert to blocks -stacked on top of each other*/
-    opacity: 1; /*Whle hovered, opacity is 1 (totally opaque)*/
-    visibility: visible; /*While hovered, drop down menu appears. This also avoids a block-level bug*/
+    opacity: 1;     /*While hovered, opacity is 1 (totally opaque)*/
+    visibility: visible; /*While hovered, drop down menu is visible. This also avoids a block-level bug*/
 }
-/*Hide submenu by default, ie when not hovered*/
-.submenu {
-    padding: 0;
-    left: 0;
-    position: absolute;
-    top: 43.5px;
-    width: 125.5px;
+.submenu { /*Hide submenu by default, ie when not hovered*/
+    position: absolute; /*Absolute=The element is positioned relative to its first positioned ancestor element*/
+    padding: 0; /*Removes parent padding*/
+    left: 0; /*Removes parent and default positioning and sets left edge 0 from the left edge of parent element*/
+    top: 100%; /*Positions top edge of this element down from nearest ancestor*/
+    z-index: 2; /*Puts submenu over other elements*/
     opacity: 0; /*While not being hovered, drop down menu hides because opacity is 0 (not opaque at all). This also avoids a block-level bug*/
     visibility: hidden;
 }
-/*When submenu shows, but isn't hovered*/
-.submenu li {
-    background-color: #387593;
+.submenu li { /*When submenu shows, but isn't hovered*/
+    background-color: #387593; /*Overrides formatting from .menu li:hover*/
     display: block; /*"Drop down" effect because elements to revert to blocks -stacked on top of each other*/
-    color: #b3b3b3;
+    color: #b3b3b3; 
 }
-/*Submenu shows AND is hovered*/
-.submenu li:hover {
+.submenu li:hover { /*Submenu shows AND is hovered*/
     color: #fff;
     background-color: #eafdf;
 }
+/*END MENU BAR 1*/
+
+
+/*MENU BAR 2*/
+.growtext:hover {
+    transform: scale(1.5);      /* Makes the element increase 1.5 times in size */
+    transition: transform .5s;  /* Makes the transform effect last .5 seconds */
+    text-shadow: 3px 3px 5px pink;
+}
+
+a:link, a:visited {
+    color: purple;
+}
+.menu2 {
+    text-align: right; /*Position on page*/
+}
+.menu2 ul {
+    list-style: none; /*Removes default bullet points*/
+    display: inline; /*Displays an element as an inline element (like <span>). Any height and width properties will have no effect*/
+}
+.menu2 li {
+    display: inline-block; /*Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values*/
+    padding: 20px; /*adds padding space around the words*/
+    font-weight: 600;
+}
+.menu2 li input {
+    border-radius: 10px;
+    text-align: right; /*Position of text within input*/
+    box-shadow: inset 1px 2px 10px 0 rgba(0,0,0,.5);
+}
+.menu2 li input:hover {
+    background-color: gainsboro;
+}
+.logo {
+    position: absolute;
+    display: inline;
+    top: 3px;
+    left: 3px;
+}
+/*END MENU BAR 2*/

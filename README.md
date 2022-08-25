@@ -2,6 +2,9 @@
 This repository is for HTML, CSS, and related projects.
 
 PROJECTS:
+CraftBox Inventory
+Bootstrap4
+
 Craft Box Inventory Website
     a single page website for showing what crafting supplies you have around. It is styled using CSS and contains a navbar, a flexible image container, hover effects, and a form. 
 

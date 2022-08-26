@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="../CSS/fileName.css" >
-	<link rel="icon" type="image/x-icon" href="../Images/Icons/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="../CSS/fileName.css" > /*links a .css stylesheet*/
+	<link rel="icon" type="image/x-icon" href="../Images/Icons/favicon-32x32.png"> /*Sets an icon to show in the browser tab*/
 	<title>Basic HTML Reference Code</Title>
 	<meta chraset="utf-8">
-	<style></style>
+	<style>
+		a:link, a:visited {
+			color: greenyellow;
+		}
+	</style>
 </head>
 <body>
-	<header></header>
+	
+	<header>
+		<style>
+			header h1{
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+			header p {
+				text-align: center;
+			}
+		</style>
+	<div>
+			<div>
+				<div>
+					<br>
+					<br>
+					<br>
+					<h1>Basic HTML and CSS Code Library</h1>
+					<p>The following code is for demonstration purposes.
+					<br> It is heavily noted and meant to provide examples of several basics. 
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
 	<nav>
 		<!--Menu with drop down list-->
 		<link rel="stylesheet" type="text/css" href="../CSS/menu_rollover.css"> <!--Link to css stylesheet-->
 		<div class="wrap">
 			<div class="menu-container">
 				<ul class="menu">
-					<li>Home</li>
+					<li>Home</li> 
 					<li>About</li>
 					<li>Portfolio
 						<ul class="submenu">
@@ -25,7 +54,7 @@
 							<li>Page 4</li>
 						</ul>
 					</li>
-					<li>Pages
+					<li>&nbsp; Pages &nbsp; <!--If the # of letters in the submenu is more than the <li> it will cause it to wrap onto more than one line-->
                         <ul class="submenu">
                             <li>Page A</li>
                             <li>Page B</li>
@@ -38,18 +67,18 @@
 			</div>
 		</div>
 	</nav>
+
 	<main>
-		<!--Call JavaScript code held in another file
+		<!--CALL JAVASCRIPT CODE-->
 		<script src="HelloWorld.js">
 		</script>
-		-->
+		<!--END CALL JAVASCRIPT CODE-->
 
-		<!--ID and HTML Fonts-->
-		<br>
-		<br>
-		<p id="paragraph1"><font color= #008B8B face= "Roboto" size="6">Paragraph 1: <font size="4">Hex Color #008B8B</font> <font size="2">"darkcyan"</font></font></p>
+		<!--ID and HTML FONTS-->
+		<h2>HTML Font and Text Elements:</h2>
+		<p id="paragraph1"><font face= "Roboto" size="6">Paragraph 1: <font color="#b53aa1" size="4">Hex Color #b53aa1</font><font color="darkcyan" size="2"> "darkcyan"</font></font></p>
 		
-		<!--HTML Text elements-->
+		<!--HTML TEXT ELEMENTS-->
 		<style>
 			#textshadow {
 				text-shadow: 2px 2px #87538b;
@@ -58,45 +87,63 @@
 				font-weight: bold;
 			}
 		</style>
-		<p><span id="textshadow">Text elements</span>
-		<br>
-		<b>Bold</b>, <i>italic</i>, <strong>strong</strong>, and <u>underline</u>.
+		<p><span id="textshadow">Text elements</span></p>
+		<p>	<b>Bold</b>, <!--Most spacing in an html document does NOT transfer-->
+			<i>italic</i>, 
+			<strong>strong</strong>, 
+			and 
+			<u>underline</u>.
 		</p>
 		<p>Space<br>
-		&nbsp;&nbsp; is <br>
-		&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight:bold;color:teal;"> big</span>.
+		&nbsp;&nbsp; is <br> <!--add blank spaces with &nbsp;-->
+		&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: 900; font-size: x-large; color: teal;"> big</span>.
 		</p>
-		<p>Her eyes were <span style="color:#7BC36C;font-weight:bold;">green</span>, like apples.</p>
+		<p>Her eyes were <span style="color:#7BC36C; font-weight:bold;">green</span>, like apples.</p>
 				
-		<!--Links-->
+		<!--LINKS-->
 		<p>Implicit Link: <a href="../Images/dog.jpg">Check out this fluff!</a>
 		<br>
-		Explicit Link: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBpH8pvuU7jrU289AymDtwgOUE4-uO1es0w&usqp=CAU">
-		Do not disturb</a>
+		Explicit Link: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBpH8pvuU7jrU289AymDtwgOUE4-uO1es0w&usqp=CAU">Do not disturb</a>
 		</p>	
 
-		<!--Image with alt text-->
-		<img height="300px" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1_Ju2SLrbL42M59kkd9ufsHw.jpg?auto=format&q=60&fit=max&w=930" alt="The Golden Ratio in nature">
-		
-		<!--pictures in grid-->
+		<!--IMAGE-->
 		<style>
-			#img_grid {
-				background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
-				background-size: contain;
-				border: 2px solid black;
-				border-radius: 15px;
-				box-shadow: 2px 2px 4px gray;
-				padding: 20px;
-				width: 60%;
-				margin: 0 auto;
+			#randomimage {
+				margin: 20px auto; /*Center block elements- img is a block element by default*/
+				width: fit-content;
+				transition: transform .5s; /*The transform animation*/
+				transform-origin: 50% 50%; /*"Dead on" transform*/
 			}
-			.row {
+			#randomimage:hover {
+				transform: scale(1.5); 
+				filter: invert(100%) blur(0px);
+			}
+		</style>
+		<div id="randomimage">
+			<img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1_Ju2SLrbL42M59kkd9ufsHw.jpg?auto=format&q=60&fit=max&w=930" alt="The Golden Ratio in nature" height="300px">
+		</div>
+		<!--END IMAGE-->
+
+		<!--ROWS & 2 COLUMNS-->
+		<style>
+			#img-grid {
+				margin: 0 auto;
+				padding: 20px; /*Can be in px, vw (viewwidth), vh (viewheight), % of parent element, or other measurements*/
+				width: 60%; /*Can be in px, vw, % of parent element, or other measurements*/
+				border: 2px solid black;
+				border-radius: 15px; /*Rounds the edges of the element*/
+				background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+				background-size: cover; /*Fits the background to the container, but may cut off some of it to do so*/
+				box-shadow: 3px 3px 10px gray;
+			}
+			#img-grid .row {
 				display: flex;
 			}
-			.column {
-				flex: 50%;
+			#img-grid .column {
+				flex: 50%; /*With 2 columns, each column is 1/2 of the parent element. */
+				text-align: center; /*Center contents of each row*/
 			}
-			.column img{
+			#img-grid .column img{
 				height: 100px;
 			}
 			/* Other ways to select the images in the photo containers: 
@@ -104,7 +151,7 @@
 			.column:child(-n+4) img {}
 			*/
 		</style>
-		<section id="img_grid">
+		<section id="img-grid">
 			<!--photo container 1-->
 			<div class="row">
 				<!--left img-->
@@ -145,44 +192,56 @@
 		</section>
 		<!--END pictures section-->
 
-		<!--Blockquote tag-->
+		<!--BLOCKQUOTE TAG-->
 		<div>
 			<style>
+				div blockquote {
+					margin: 20px auto; /*centers the element on the page with margin on top and bottom*/
+				}
 				blockquote {
+				padding: 10px 15px; /*padding to top/bottom and left/right*/
 				border-radius: 20px;
 				border: 3px solid silver;
-				padding: 5px 5px 5px 5px;
+				box-shadow: inset -3px -3px 10px gray, inset 3px 3px 10px lavender;
+				font-family: cursive ;
+				width: fit-content;
 				}
 			</style>
-			<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
-				“The bridge will only take you halfway there, to those mysterious lands you long to see. 
-				<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
-				<br>So come and walk awhile with me and share the twisting trails and wondrous worlds I've known. 
-				<br>But this bridge will only take you halfway there. The last few steps you have to take alone.”
-				<br>
-				<br>― Shel Silverstein
-			</blockquote>
+			<div>
+				<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
+					“The bridge will only take you halfway there, to those mysterious lands you long to see. 
+					<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
+					<br>So come and walk awhile with me and share the twisting trails and wondrous worlds I've known. 
+					<br>But this bridge will only take you halfway there. The last few steps you have to take alone.”
+					<br>
+					<br>― Shel Silverstein
+				</blockquote>
+			</div>
 		</div>
+		<!--END BLOCKQUOTE TAG-->
 		
-		<!--Embed video-->
+		<!--EMBED VIDEO-->
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/uD4izuDMUQA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 		</iframe>
+		<!--END EMBED VIDEO-->
 		
-		<!--Table-->
+		<!--TABLE-->
 		<style>
 			table {
 				border: 3px solid purple;
 				width: 100%;
-				box-shadow: 2px 2px 10px pink;
+				box-shadow: 2px 2px 10px magenta, -2px -2px 10px pink;
 			}
 			td:hover {
-				background-color: #94CCEC;
+				background-color: rgba(0,0,0,.3);
 				color: blue;
+				box-shadow: 2px 2px 10px yellow;
 			}
 			tr th {
 				background-color: #D1A1FC;
 				color: white;
 				font-weight: bold;
+				font-variant: small-caps;
 			}
 			tr td {
 				background-color:;
@@ -208,8 +267,7 @@
 			#column4 {
 				width:;
 				background-color: rgb(241, 196, 211);
-			}
-			
+			}			
 		</style>
 		<table>
 			<colgroup>
@@ -219,7 +277,7 @@
 				<col id="column4">
 			</colgroup>
 			<tr>
-				<th>FRUIT</th>
+				<th>Fruit</th>
 				<th>Season</th>
 				<th>Where to Pick</th>
 				<th>Description</th>
@@ -249,41 +307,50 @@
 				<td>My favorite!</td>
 			</tr>
 		</table>
+		<!--END TABLE-->
 		
-		<!-- Ordered List adds numbers by default-->
+		<!--LISTS-->
 		<style>
-		ol {
-			list-style-type: upper-roman;
-		}
-		ul{
-			list-style-type: square;
-		}
+			ol { 	<!-- Ordered List adds numbers by default-->
+				list-style-type: upper-roman;
+			}
+			ul{		<!-- Unordered List adds bullets by default-->
+				list-style-type: square;
+			}
 		</style>
-		<h2>Ordered List with Numbers</h2>
-		<ol>
-			<li>Spring</li>
-			<li>Summer</li>
-			<li>Fall</li>
-			<li>Winter</li>
-		</ol>
-		<!-- Unordered List adds default bullet points-->
-		<h2>Unordered List with Bullet Points</h2>
-		<ul>
-			<li>Jams</li>
-			<li>Pies</li>
-			<li>Tarts</li>
-			<li>Cakes</li>
-		</ul>
-		
-		<!--Form and Input-->
+		<div>
+			<h2>Ordered List with Numbers</h2>
+			<ol>
+				<li>Spring</li>
+				<li>Summer</li>
+				<li>Fall</li>
+				<li>Winter</li>
+			</ol>
+		</div>
+		<div>
+			<h2>Unordered List with Bullet Points</h2>
+			<ul> 	
+				<li>Jams</li>
+				<li>Pies</li>
+				<li>Tarts</li>
+				<li>Cakes</li>
+			</ul>
+		</div>
+		<!--END LISTS-->
+
+		<!--FORM AND INPUTS-->
 		<form action="" method="get">
 			First name: <input type="text" name="First name"><br>
 			Last name: <input type="text" name="Last name"><br>
 			<input type="submit" value="Submit">
 		</form>
+		<!--END FORM AND INPUTS-->
+
 		
-		<!--Article and Details Tag-->
+		<!--ARTICLE AND DETAILS TAG-->
 		<article>
+			<h1>Details Tag, Time and Datetime, Bookmarks:</h1>
+			<p>The <a href="https://www.w3schools.com/tags/tag_details.asp">details</a> tag specifies additional details that the user can open and close on demand.</p>
 			<details>
 				<summary>Drop Down Item</summary>
 				<p>Contents that show up when clicked- can be other elements.</p>
@@ -299,19 +366,18 @@
 			</details>
 		</article>
 		
-		<!--Time and Datetime Tag-->
+		<!--TIME AND DATETIME TAGS-->
 		<p>The General Store is open every day from <time>9 a.m.</time> until <time>7 p.m.</time>.<br>
 		Please note that we are closed on <time datetime="12-25">Christmas</time> and <time datetime="11-24">Thanksgiving</time>. Thank you.</p>
 
-		<!--Bookmark using #id-->
-		<p>Page Bookmark:
-		<br>Jump back to <a href="#paragraph1">Paragraph 1</a> by clicking the link.</p>
+		<!--BOOKMARK USING #id-->
+		<p>Jump back to <a href="#paragraph1">Paragraph 1</a> by clicking the link.
+		<br>Jupt to the <a href="#column1">Table</a> by clicking the link, which uses it's #idname (preceeded by #).
+		</p>
 	
-		<!--
-		Animation--------------------------------------
-		-->
+		<!--ANIMATED BOXES DEMO-->
 		<style>
-			h1 {
+			.animation1 h1 {
 			color: rgba(0, 141, 165,1);
 			margin-left: 100px;
 			text-shadow: 1px .5px 4px rgba(0,0,0,.6);
@@ -393,31 +459,30 @@
 				}
 			}
 		</style>
-		<div>
-			<h1>CSS Animation Demo</h1>
+		<div class="animation1">
+			<div>
+				<h1>CSS Animation Demo</h1>
+			</div>
+
+			<div class="container">
+				<div class="squares">
+					<p>Box 1</p>
+				</div>
+
+				<div class="squares">
+					<p>Box 2</p>
+				</div>
+
+				<div class="squares">
+					<p>Box 3</p>
+				</div>
+
+				<div class="squares">
+					<p>Box 4</p>
+				</div>
+			</div>
 		</div>
-
-		<div class="container">
-			<div class="squares">
-				<p>Box 1</p>
-			</div>
-
-			<div class="squares">
-				<p>Box 2</p>
-			</div>
-
-			<div class="squares">
-				<p>Box 3</p>
-			</div>
-
-			<div class="squares">
-				<p>Box 4</p>
-			</div>
-		</div>
-		<!--
-		END Animation------------------------------------
-		-->
-
+		<!--END ANIMATED BOXES DEMO-->
 	</main>
 	<footer></footer>
 </body>

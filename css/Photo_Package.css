@@ -16,8 +16,6 @@
     background-color: rgba(255, 255, 230,1);
     box-shadow: 3px 3px 10px 0 rgba(0,0,0,.5), -2px -2px 10px salmon;
 }
-/*GALLERY SECTION ANIMATION*/
-/*END GALLERY SECTION ANIMATION*/
 p {
     font-weight: 300;
     line-height: 30px;
@@ -86,6 +84,7 @@ p {
     transform: scale(1.1); 
 }
 /*END Photo overlay transition*/
+/*END PHOTO CONTAINER*/
 
 
 /*Flex Box Rows & Columns Layout*/

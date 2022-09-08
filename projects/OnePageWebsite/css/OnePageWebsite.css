@@ -71,11 +71,12 @@ header h1 {
 
 /*GALLERY*/
 #communitytable {
-	margin: 25px;
+	margin: 20px auto;
 	padding: 25px;
 	background-color: rgba(0, 0, 0, 0.15);
 	border: 5px dashed darkslategray;
 	border-radius: 15px;
+	width: fit-content;
 }
 .gallery {
 	text-align: center;

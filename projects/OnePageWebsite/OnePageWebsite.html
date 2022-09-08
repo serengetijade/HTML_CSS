@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>HTML Project</title>
-	<link rel="stylesheet" type="text/css" href="CSS/OnePageWebsite.css">
+	<title>One Page Website</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1.0" "/>
+    <meta name="description" content="A simple page to demonstrate HTML, CSS, and JavaScipt">
+    <meta name="author" content="Jade Abreu">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Corinthia&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="CSS/OnePageWebsite.css">
+	<script src="js/OnePageWebsite.js" defer></script> 
 </head>
 <body>
 	<!--nav element-->
 	<nav>
-		<button type="button"><a href= #communitytable>Community Craft Table</a></button> |
-		<button type="button"><a href= #videosection>Tutorials</a></button> | 
-		<button type="button"><a href= #signup>Email Sign Up</a></button>
-	</nav>
+        <div  class="navbar">
+            <ul>
+                <a href="#communitytable"><li class="growtext">Community Craft Table</li></a>
+                <a href="#videosection"><li class="growtext">Tutorials</li></a>
+                <a href="#signup"><li class="growtext">Email Sign Up</li></a>
+            </ul>
+        </div>
+    </nav>
 	<!--END nav element-->
 	
 	<!--home page section with header tag-->
 	<header>
 		<div>
-			<p>Gallery</p>
+			<h1>Community Craft Table</h1>
 		</div>
 	</header>
 	<!--END home page section-->
 	
 	<main>
-		<div>
-			<h1>Community Craft Table</h1>
-			<p>Share your completed craft projects with the rest of the community. 
-			<br>Or check out others' work for inspiration!</p>
-		</div>
 		
-		<!--pictures section-->
+		<!--GALLERY-->
 		<section id="communitytable">
+			<div class="gallery">
+				<h1>Gallery</h1>
+				<p>Share your completed craft projects with the rest of the community.</p>
+			</div>
 			<!--photo container 1-->
 			<div class="row">
 				<!--left img-->
@@ -69,9 +79,9 @@
 			</div>
 			<!--END photo container 2-->
 		</section>
-		<!--END pictures section-->
+		<!--END GALLERY-->
 		
-		<!--video section-->
+		<!--TUTORIALS-->
 		<section id="videosection">
 			<div>
 				<h1>Don't know where to start?</h1>
@@ -81,15 +91,89 @@
 				</div>
 			</div>
 		</section>
-		<!--ENd video section-->
-		
-		<div>
-			<blockquote>Take your needle, my child, and work at your pattern; it will come out a rose by and by. 
-			<br>Life is like that - one stitch at a time taken patiently and the pattern will come out all right like the embroidery.
-			<br>
-			<br>-<em> Oliver Wendell Holmes Sr.</em>
-			</blockquote>
+		<!--END TUTORIALS-->
+
+		<!--LIGHTBOX-->
+		<section class="lightbox">
+			<div class="lightbox-intro">
+				<h1>Looking for Inspiration?</h1>
+				<p>Nature is always a good place to look when your idea engine runs low.</p>
+			</div>
+			<div class="row">
+				<!-- Images used to open the lightbox -->
+				<div class="column">
+				  	<img src="./images/plant1-small.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+				</div>
+				<div class="column">
+				  	<img src="./images/plant2-small.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+				</div>
+				<div class="column">
+				  	<img src="./images/plant3-small.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+				</div>
+				<div class="column">
+				  	<img src="./images/plant4-small.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+				</div>
+			  </div>
+
+			<!--THE MODAL/LIGHTBOX-->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+					<div class="mySlides">
+						<div class="numbertext">1 / 4</div>
+						<img src="./images/plant1.png" style="width:100%">
+					</div>				
+					<div class="mySlides">
+						<div class="numbertext">2 / 4</div>
+						<img src="./images/plant2.png" style="width:100%">
+					</div>				
+					<div class="mySlides">
+						<div class="numbertext">3 / 4</div>
+						<img src="./images/plant3.png" style="width:100%">
+					</div>				
+					<div class="mySlides">
+						<div class="numbertext">4 / 4</div>
+						<img src="./images/plant4.png" style="width:100%">
+					</div>		
+					
+					<!--NEXT/PREVIOUS CONTROLS-->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<!--CAMPTION TEXT-->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+
+					<!--THUMBNAIL IMAGE CONTROLS-->
+					<div class="column">
+						<img class="lightboxthumb" src="./images/plant1.png" onclick="currentSlide(1)" alt="Pink Flowers">
+					</div>
+					<div class="column">
+						<img class="lightboxthumb" src="./images/plant2.png" onclick="currentSlide(2)" alt="Sunflowers">
+					</div>
+					<div class="column">
+						<img class="lightboxthumb" src="./images/plant3.png" onclick="currentSlide(3)" alt="Succulents">
+					</div>
+					<div class="column">
+						<img class="lightboxthumb" src="./images/plant4.png" onclick="currentSlide(4)" alt="Begonias">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END LIGHTBOX-->
+
+		<!--QUOTEBOX-->
+		<div class="quote">
+			<div>
+				<blockquote>Take your needle, my child, and work at your pattern; it will come out a rose by and by. 
+					<br>Life is like that - one stitch at a time taken patiently and the pattern will come out all right like the embroidery.
+					<br>
+					<br>-<em> Oliver Wendell Holmes Sr.</em>
+				</blockquote>
+			</div>
 		</div>
+		<!--END QUOTEBOX-->
 	</main>
 	<footer>
 		<!--contact form-->
@@ -98,7 +182,7 @@
 			<form action="" method="post"> 
 				First Name: <input type="text" name="First name"><br>
 				Last Name: <input type="text" name="Last name"><br>
-				Email: <input type="text" name="Email"><br>
+				Email: <input type="email" name="Email"><br>
 				<input type="submit" name="Submit">
 			</form>
 		</div>

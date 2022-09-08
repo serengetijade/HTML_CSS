@@ -1,45 +1,229 @@
 /*COLORS: rgba(255, 255, 230, 1), gray, darkslategray*/
-nav {
-	text-align: center;
-}
+/*GENERAL STYLE*/
 body {
-    font-family: Roboto;
-    font-size: 14px;
+	font-family: Roboto;
+	font-size: 16px;
 	background-color: rgba(255,255,230,1);
-}
-main {
-	padding: 0 20px 0 20px;
 }
 h1 {
 	text-align: center;
 }
+main h1 {
+	margin: 0;
+	padding: 0;
+	font-family: "Corinthia", "Roboto";
+	font-size: 90px;
+}
+/*END GENERAL STYLE*/
+
+/*NAVBAR*/
+nav a:link, nav a:visited {
+    color: black;
+}
+.growtext:hover {
+    transform: scale(1.5);      /* Makes the element increase 1.5 times in size */
+    transition: transform .5s;  /* Makes the transform effect last 1.5 seconds */
+    text-shadow: 3px 3px 5px white;
+}
+nav {
+    z-index: 10;
+}
+.navbar {
+    text-align: center;
+}
+.navbar ul {
+    list-style: none;
+    display: inline;
+	padding: 0;
+}
+.navbar li {
+    display: inline-block;
+    padding: 20px;
+    font-weight: 600;
+}
+.navbar li:hover {
+    text-shadow: 3px 3px 5px white;
+}
+/*SEARCHBAR STYLE
+.navbar li input {
+    border-radius: 10px;
+    text-align: right;
+    box-shadow: inset 1px 2px 10px 0 rgba(0,0,0,.5);
+}
+.navbar li input:hover {
+    background-color: lightgreen;
+}
+*/
+/*END NAVBAR*/
+
+/*HEADER*/
 header {
 	background-image: url("..//Images/communitycrafttable.jpg");
 	background-size: cover; 
-	padding: 50px 0 50px 0;
+	padding: 75px 0;
 	text-align: center;
 }
+header h1 {
+	font-size: 90px;
+	text-shadow: 3px 3px 10px white, -3px -3px 10px white;
+}
+/*END HEADER*/
+
+/*GALLERY*/
 #communitytable {
-	background-color: antiquewhite;
-	padding: 25px 25px 25px 25px;
+	margin: 25px;
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 0.15);
+	border: 5px dashed darkslategray;
 	border-radius: 15px;
+}
+.gallery {
+	text-align: center;
+}
+.gallery h1{
+	margin: 0 auto;
+
+}
+.gallery p {
 }
 img {
 	height: 200px;
 }
-.row {
+#communitytable .row {
 	display: flex;
 }
-.column {
+#communitytable .column {
 	flex: 50.00%;
 	padding: 5px;
 }
-blockquote {
-	background-color: thistle;
-	border-radius: 15px;
-	border: 3px solid purple;
-	padding: 10px;
+/*END GALLERY*/
+
+/*TUTORIALS*/
+#videosection { 
+	text-align: center;
 }
+/*END TUTORIALS*/
+
+/*LIGHTBOX*/
+.lightbox {
+	margin: 25px;
+}
+.lightbox-intro {
+	text-align: center;
+}
+.row > .column {
+	padding: 0 8px;
+}
+.row:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+.column {	/* Create four equal columns that floats next to eachother */
+	float: left;
+	width: 25%;
+}
+.modal {	/* The Modal (background) */
+	display: none;
+	position: fixed;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+}
+.modal-content {	/* Modal Content */
+	position: relative;
+	padding: 0;
+	background-color: #fefefe;
+	margin: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+.close {	/*Close Button */
+	position: absolute;
+	top: 10px;
+	color: white;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+.mySlides {	/* Hide the slides by default */
+	display: none;
+}
+/*NEXT & PREVIOUS BUTTONS*/
+.prev, .next {
+	position: absolute;
+	margin-top: -50px;
+	top: 50%;
+	padding: 16px;
+	cursor: pointer;
+	width: auto;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: 0.6s ease;
+}
+.next {		/* Position the "next button" to the right */
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {	/* On hover, add a black background color with a little bit see-through */
+  	background-color: rgba(0, 0, 0, 0.8);
+}
+.numbertext {	/* Number text (1/3 etc) */
+	position: absolute;
+	top: 0;
+	padding: 8px 12px;
+	color: #f2f2f2;
+	font-size: 12px;
+}
+.caption-container {	/* Caption text */
+	padding: 2px 16px;
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+img.lightboxthumb {
+  	opacity: 0.6;
+}
+.active, .lightboxthumb:hover {
+  	opacity: 1;
+}
+img.hover-shadow {
+  	transition: 0.3s;
+}
+.hover-shadow:hover {
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*END LIGHTBOX*/
+
+/*BLOCKQUOTE*/
+.quote {
+	padding: 25px;
+}
+blockquote {
+	margin: 0 auto;
+	padding: 15px;
+	width: fit-content;
+	background-color: thistle;
+	border: 3px solid purple;
+	border-radius: 15px;
+}
+/*END BLOCKQUOTE*/
+
+/*FOOTER*/
 #signup {
 	padding: 15px;
     box-shadow: 2px 2px 10px rgba(0,0,0,.5);
@@ -48,15 +232,15 @@ blockquote {
 form {
 	padding: 15px;	
 }
-form input[type="text"] {
-    width: 75%;
+form input[type="text"], form input[type="email"] {
+	width: 75%;
     margin: 10px 1em;
     border: 1px solid darkslategray;
     border-radius: 8px;
 	box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,.15);
-
 }
 footer {
 	background-color: darkslategray;
 	color: white;
 }
+/*END FOOTER*/

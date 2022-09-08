@@ -1,5 +1,8 @@
 /*COLORS: rgba(255, 255, 230, 1), gray, darkslategray*/
 /*GENERAL STYLE*/
+* {
+	box-sizing: border-box;
+  }
 body {
 	font-family: Roboto;
 	font-size: 16px;

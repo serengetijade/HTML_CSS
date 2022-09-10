@@ -119,7 +119,64 @@
                     </div>
                 </div>
             </div>
+            <!--SCROLLSPY: MORE TUTORIALS-->
+            <div id="scrollspy-container" style="position: relative">
+                <nav id="scrollspy1" class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Sewing Tutorials</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Sewing Equipment</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-1-1">Needles and Thread</a>
+                            <a class="nav-link ml-3 my-1" href="#item-1-2">Fabric</a>
+                            <a class="nav-link ml-3 my-1" href="#item-1-3">Sewing Machine</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Sewing Basics</a>
+                        <a class="nav-link ml-3 my-1" href="#item-2-1">Basic Stitches</a>
+                        <a class="nav-link ml-3 my-1" href="#item-2-2">Finishings</a>
+                        <a class="nav-link" href="#item-3">Intermediat Sewing</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ml-3 my-1" href="#item-3-1">Patterns</a>
+                            <a class="nav-link ml-3 my-1" href="#item-3-2">Custom Fitting</a>
+                        </nav>
+                        </nav>
+                </nav>
+                    
+                <div data-spy="scroll" data-target="#scrollspy1" data-offset="0">
+                    <h4 id="item-1">Sewing Equipment</h4>
+                    <p>Before you begin any craft projects, its important to have a basic understanding of the tools. Especially when working with machines!</p>
+                    <h5 id="item-1-1">Needles and Thread</h5>
+                    <p>There are many types available at your local craft store and online.</p>
+                    <h5 id="item-1-2">Fabric</h5>
+                    <p>Cotton, and silk, and velvet...oh my!</p>
+                    <h5 id="item-1-3">Sewing Machine</h5>
+                    <p>Learn the specifics of your machine before starting. The manual is the best place to start.</p>
 
+                    <h4 id="item-2">Sewing Basics</h4>
+                    <p>You don't need to be a master to start sewing. There are many patterns that cater to beginners!</p>
+                    <h5 id="item-2-1">Basic Stitches</h5>
+                    <p>Let the fun begin!</p>
+                    <h5 id="item-2-1">Finishings</h5>
+                    <p>There are so many things to cover, this is just a basic introduction.</p>
+
+                    <h4 id="item-3">Intermediate Sewing</h4>
+                    <p>Everyone learns at their own speed, but we promise: it won't take long to get here.</p>
+                    <h5 id="item-3-1">Patterns</h5>
+                    <p>Don't be intimidated, patterns are easy and there to help.
+                        <br><ul>
+                            <li><a href="https://simplicity.com/">Simplicity</a></li>
+                            <li><a href="https://somethingdelightful.com/mccalls/m7971">McCalls</a></li>
+                            <li><a href="https://reconstructinghistory.com/">Rechonstructing History</a></li>
+                            <li><a href="https://www.mediaevalmisc.com/">Period Patterns</a></li>
+                        </ul>
+                    </p>
+                    <h5 id="item-3-2">Custom Fitting</h5>
+                    <p>What's the point if you don't end up with that tailored look!</p>
+                </div>
+            </div>
+            <!--END SCROLLSPY: MORE TUTORIALS-->
+            <!------------END TUTORIAL VIDEOS------------>
+
+            <!------------FIRST PROJECT IDEAS------------>
             <h1 class="text-center text-info my3">First Project Ideas</h1>
             <div class="card-deck">
                 <div class="card">
@@ -157,17 +214,75 @@
                 </div>
             </div>
         </div>
-        <!------------END TUTORIAL VIDEOS------------>
+        <!------------END FIRST PROJECT IDEAS------------>
+
+        <!--JUMBOTRON HEADING-->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+            <div class="container">
+                <h1 class="display-4 hissen-sm-down" style="color:#fff; font-family:roboto; font-weight: 900; text-transform: smallcaps;">Shop for Supplies</h1>
+                <p class="lead">Looking for good deals on crafting supplies?...</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#register"> 
+                    See our monthly deals!
+                </button>
+            </div>
+        </div>
+        <!--END JUMBOTRON HEADING-->
+
+        <!--FORM MODAL-->
+  
+        <!-- Modal -->
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Monthly Deals</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">First Name</label>
+                                <input type="text" class="form-control" id="firstNameField" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">LastName</label>
+                                <input type="text" class="form-control" id="lastNameField" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Email</label>
+                                <input type="text" class="form-control" id="emailField" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Password</label>
+                                <input type="text" class="form-control" id="passwordField" placeholder="Password">
+                            </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END FORM MODAL-->
 
         <!------------EMAIL SIGNUP------------>
         <div id="signup">
             <form class="text-center ">
                 <h1 class="text-info my-5">Sign up for Craft Box Classroom updates</h1>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">  
+                    <!--To use the popover feature, add the correct class name (popover-dismiss) to the target element:--> 
+                    <a tabindex="0" class="btn btn-info popover-dismiss"  
+                        role="button" data-toggle="popover" data-trigger="focus" 
+                        data-placement="top" title="Signup complete" 
+                        data-content="Thanks for signing up! There are good things headed your way!">Sign up!</a>                
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+            </form>
         </div>
         <!------------END EMAIL SIGNUP------------>
 
@@ -190,19 +305,32 @@
 
         </div>
         <!------------END FOOTER------------>
-
-
-
-
     </div>
 
-
-
-
-    <!-- Optional JavaScript -->
+    <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!--SCROLLSPY-->
+    <script>
+    $('#scrollspy-container').scrollspy({ target: '#scrollspy1' })
+
+    $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+    })
+    </script>
+    
+    <script> 
+    //Popover on Submit "Button". For proper cross-browser and cross-platform behavior, you must use the <a> tag, not the <button> tag, and you also must include a tabindex attribute.
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+  
+    </script>
+
+
+
 </body>
 </html>

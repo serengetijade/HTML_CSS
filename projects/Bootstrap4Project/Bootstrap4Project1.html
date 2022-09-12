@@ -120,57 +120,73 @@
                 </div>
             </div>
             <!--SCROLLSPY: MORE TUTORIALS-->
-            <div id="scrollspy-container" style="position: relative">
-                <nav id="scrollspy1" class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#">Sewing Tutorials</a>
-                    <nav class="nav nav-pills flex-column">
-                        <a class="nav-link" href="#item-1">Sewing Equipment</a>
-                        <nav class="nav nav-pills flex-column">
-                            <a class="nav-link ml-3 my-1" href="#item-1-1">Needles and Thread</a>
-                            <a class="nav-link ml-3 my-1" href="#item-1-2">Fabric</a>
-                            <a class="nav-link ml-3 my-1" href="#item-1-3">Sewing Machine</a>
+            <style>
+                .scrollspy-container {
+                    position: relative;
+                }
+                .col-8 {
+                    position: relative;
+                    height: 450px;
+                    overflow: auto;
+                }
+            </style>
+            <div id="scrollspy-container">
+                <div class="row"> <!--Must be in rows and columns to work-->
+                    <div class="col-4">
+                        <nav id="scrollspy1" class="navbar navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Sewing Tutorials</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link" href="#item-1">Sewing Equipment</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3 my-1" href="#item-1-1">Needles and Thread</a>
+                                    <a class="nav-link ml-3 my-1" href="#item-1-2">Fabric</a>
+                                    <a class="nav-link ml-3 my-1" href="#item-1-3">Sewing Machine</a>
+                                </nav>
+                                <a class="nav-link" href="#item-2">Sewing Basics</a>
+                                <a class="nav-link ml-3 my-1" href="#item-2-1">Basic Stitches</a>
+                                <a class="nav-link ml-3 my-1" href="#item-2-2">Finishings</a>
+                                <a class="nav-link" href="#item-3">Intermediat Sewing</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ml-3 my-1" href="#item-3-1">Patterns</a>
+                                    <a class="nav-link ml-3 my-1" href="#item-3-2">Custom Fitting</a>
+                                </nav>
+                            </nav>
                         </nav>
-                        <a class="nav-link" href="#item-2">Sewing Basics</a>
-                        <a class="nav-link ml-3 my-1" href="#item-2-1">Basic Stitches</a>
-                        <a class="nav-link ml-3 my-1" href="#item-2-2">Finishings</a>
-                        <a class="nav-link" href="#item-3">Intermediat Sewing</a>
-                        <nav class="nav nav-pills flex-column">
-                            <a class="nav-link ml-3 my-1" href="#item-3-1">Patterns</a>
-                            <a class="nav-link ml-3 my-1" href="#item-3-2">Custom Fitting</a>
-                        </nav>
-                        </nav>
-                </nav>
-                    
-                <div data-spy="scroll" data-target="#scrollspy1" data-offset="0">
-                    <h4 id="item-1">Sewing Equipment</h4>
-                    <p>Before you begin any craft projects, its important to have a basic understanding of the tools. Especially when working with machines!</p>
-                    <h5 id="item-1-1">Needles and Thread</h5>
-                    <p>There are many types available at your local craft store and online.</p>
-                    <h5 id="item-1-2">Fabric</h5>
-                    <p>Cotton, and silk, and velvet...oh my!</p>
-                    <h5 id="item-1-3">Sewing Machine</h5>
-                    <p>Learn the specifics of your machine before starting. The manual is the best place to start.</p>
+                    </div>
+              
+                    <div class="col-8">   
+                        <div data-spy="scroll" data-target="#scrollspy1" data-offset="0">
+                            <h4 id="item-1">Sewing Equipment</h4>
+                            <p>Before you begin any craft projects, its important to have a basic understanding of the tools. Especially when working with machines!</p>
+                            <h5 id="item-1-1">Needles and Thread</h5>
+                            <p>There are many types available at your local craft store and online.</p>
+                            <h5 id="item-1-2">Fabric</h5>
+                            <p>Cotton, and silk, and velvet...oh my!</p>
+                            <h5 id="item-1-3">Sewing Machine</h5>
+                            <p>Learn the specifics of your machine before starting. The manual is the best place to start.</p>
 
-                    <h4 id="item-2">Sewing Basics</h4>
-                    <p>You don't need to be a master to start sewing. There are many patterns that cater to beginners!</p>
-                    <h5 id="item-2-1">Basic Stitches</h5>
-                    <p>Let the fun begin!</p>
-                    <h5 id="item-2-2">Finishings</h5>
-                    <p>There are so many things to cover, this is just a basic introduction.</p>
+                            <h4 id="item-2">Sewing Basics</h4>
+                            <p>You don't need to be a master to start sewing. There are many patterns that cater to beginners!</p>
+                            <h5 id="item-2-1">Basic Stitches</h5>
+                            <p>Let the fun begin!</p>
+                            <h5 id="item-2-2">Finishings</h5>
+                            <p>There are so many things to cover, this is just a basic introduction.</p>
 
-                    <h4 id="item-3">Intermediate Sewing</h4>
-                    <p>Everyone learns at their own speed, but we promise: it won't take long to get here.</p>
-                    <h5 id="item-3-1">Patterns</h5>
-                    <p>Don't be intimidated, patterns are easy and there to help.</p>
-                    <ul>
-                        <li><a href="https://simplicity.com/">Simplicity</a></li>
-                        <li><a href="https://somethingdelightful.com/mccalls/m7971">McCalls</a></li>
-                        <li><a href="https://reconstructinghistory.com/">Rechonstructing History</a></li>
-                        <li><a href="https://www.mediaevalmisc.com/">Period Patterns</a></li>
-                    </ul>
-                    <h5 id="item-3-2">Custom Fitting</h5>
-                    <p>What's the point if you don't end up with that tailored look!</p>
-                </div>
+                            <h4 id="item-3">Intermediate Sewing</h4>
+                            <p>Everyone learns at their own speed, but we promise: it won't take long to get here.</p>
+                            <h5 id="item-3-1">Patterns</h5>
+                            <p>Don't be intimidated, patterns are easy and there to help.</p>
+                            <ul>
+                                <li><a href="https://simplicity.com/">Simplicity</a></li>
+                                <li><a href="https://somethingdelightful.com/mccalls/m7971">McCalls</a></li>
+                                <li><a href="https://reconstructinghistory.com/">Rechonstructing History</a></li>
+                                <li><a href="https://www.mediaevalmisc.com/">Period Patterns</a></li>
+                            </ul>
+                            <h5 id="item-3-2">Custom Fitting</h5>
+                            <p>What's the point if you don't end up with that tailored look!</p>
+                        </div>
+                    </div>
+                </div>   
             </div>
             <!--END SCROLLSPY: MORE TUTORIALS-->
             <!--END TUTORIAL VIDEOS-->

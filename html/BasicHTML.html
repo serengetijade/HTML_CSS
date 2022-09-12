@@ -1,43 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="../CSS/fileName.css" > /*links a .css stylesheet*/
-	<link rel="icon" type="image/x-icon" href="../Images/Icons/favicon-32x32.png"> /*Sets an icon to show in the browser tab*/
-	<title>Basic HTML Reference Code</Title>
 	<meta chraset="utf-8">
-	<style>
-		a:link, a:visited {
-			color: greenyellow;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../css/BasicHTML.css" > <!--Source CSS file-->
+	<link rel="icon" type="image/x-icon" href="../Images/Icons/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Google Fonts part 1-->
+	<link href="https://fonts.googleapis.com/css2?family=Corinthia&family=Roboto&display=swap" rel="stylesheet"> <!--Google Fonts part 2-->
+	<script src="../javascript/BasicHTML.js" defer></script>
+	<title>Basic HTML Reference Code</Title>
 </head>
 <body>
-	
-	<header>
-		<style>
-			header h1{
-				text-align: center;
-				padding: 0;
-				margin: 0;
-			}
-			header p {
-				text-align: center;
-			}
-		</style>
-	<div>
-			<div>
-				<div>
-					<br>
-					<br>
-					<br>
-					<h1>Basic HTML and CSS Code Library</h1>
-					<p>The following code is for demonstration purposes.
-					<br> It is heavily noted and meant to provide examples of several basics. 
-					</p>
-				</div>
-			</div>
-		</div>
-	</header>
+	<script>
+		document.body.classList.add('fade-out'); //Fade effect. It is necessary to list this script here to prevent flickering. 
+
+		window.addEventListener('DOMContentLoaded', () => {
+			document.body.classList.remove('fade-out');
+		});
+	</script>
 	<nav>
 		<!--Menu with drop down list-->
 		<link rel="stylesheet" type="text/css" href="../CSS/menu_rollover.css"> <!--Link to css stylesheet-->
@@ -55,40 +35,52 @@
 						</ul>
 					</li>
 					<li>&nbsp; Pages &nbsp; <!--If the # of letters in the submenu is more than the <li> it will cause it to wrap onto more than one line-->
-                        <ul class="submenu">
-                            <li>Page A</li>
-                            <li>Page B</li>
-                            <li>Page C</li>
-                            <li>Page D</li>
-                        </ul>
-                    </li>
+						<ul class="submenu">
+							<li>Page A</li>
+							<li>Page B</li>
+							<li>Page C</li>
+							<li>Page D</li>
+						</ul>
+					</li>
 					<li>Contact</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<main>
-		<!--CALL JAVASCRIPT CODE-->
-		<script src="HelloWorld.js">
-		</script>
-		<!--END CALL JAVASCRIPT CODE-->
+	<header>
+		<br> <!--Line break. This is an easy way to move the header down so it's "below" the navbar.-->
+		<br>
+		<br>	
+		<div>
+			<h1>Basic HTML and CSS Code Library</h1>
+			<p>The following code is for demonstration purposes.
+				<br>It is heavily noted and meant to provide examples of some <i>basics</i>. 
+				<br>Please note that some css is included in this html document as a learning example.
+			</p>
+		</div>
+	</header>
 
+	<main>
+		<!--FONT AND TEXT ELEMENTS-->
 		<!--ID and HTML FONTS-->
-		<h2>HTML Font and Text Elements:</h2>
+		<h1>HTML Font and Text Elements</h1>
 		<p id="paragraph1"><font face= "Roboto" size="6">Paragraph 1: <font color="#b53aa1" size="4">Hex Color #b53aa1</font><font color="darkcyan" size="2"> "darkcyan"</font></font></p>
 		
 		<!--HTML TEXT ELEMENTS-->
 		<style>
-			#textshadow {
-				text-shadow: 2px 2px #87538b;
-				text-decoration-line: underline;
-				text-decoration-style: wavy;
+			.textshadow {	/*class names are referenced by .className*/
+				text-shadow: 2px 2px 8px #87538b;
 				font-weight: bold;
 			}
+			#textunderline{	/*ids are referenced by #idName*/
+				text-decoration-line: underline; 
+				text-decoration-style:wavy;
+			}
 		</style>
-		<p><span id="textshadow">Text elements</span></p>
-		<p>	<b>Bold</b>, <!--Most spacing in an html document does NOT transfer-->
+		<p><span class="textshadow">Text shadow</span></p>
+		<p id="textunderline">Underline</p>
+		<p>	<b>Bold</b>, 	<!--Most spacing in an html document does NOT transfer-->
 			<i>italic</i>, 
 			<strong>strong</strong>, 
 			and 
@@ -99,18 +91,21 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: 900; font-size: x-large; color: teal;"> big</span>.
 		</p>
 		<p>Her eyes were <span style="color:#7BC36C; font-weight:bold;">green</span>, like apples.</p>
+		<!--END FONT AND TEXT ELEMENTS-->
 				
 		<!--LINKS-->
+		<h1>Links</h1>
 		<p>Implicit Link: <a href="../Images/dog.jpg">Check out this fluff!</a>
 		<br>
 		Explicit Link: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBpH8pvuU7jrU289AymDtwgOUE4-uO1es0w&usqp=CAU">Do not disturb</a>
 		</p>	
 
 		<!--IMAGE-->
+		<h1>Images</h1>
 		<style>
 			#randomimage {
 				margin: 20px auto; /*Center block elements- img is a block element by default*/
-				width: fit-content;
+				width: fit-content; /*Because of the hover effect, you want to minimize the width so when you're not hovering, it goes back to normal*/
 				transition: transform .5s; /*The transform animation*/
 				transform-origin: 50% 50%; /*"Dead on" transform*/
 			}
@@ -130,7 +125,7 @@
 				margin: 0 auto;
 				padding: 20px; /*Can be in px, vw (viewwidth), vh (viewheight), % of parent element, or other measurements*/
 				width: 60%; /*Can be in px, vw, % of parent element, or other measurements*/
-				border: 2px solid black;
+				border: 3px solid black;
 				border-radius: 15px; /*Rounds the edges of the element*/
 				background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
 				background-size: cover; /*Fits the background to the container, but may cut off some of it to do so*/
@@ -158,14 +153,14 @@
 				<div class="column">
 					<img src= "../Images/htmlproject1.jpg" alt="Crown Royal Gown">
 					<div>
-						<h3>Submitted by: John Smith</h3>
+						<h3>Submitted by: Mimi</h3>
 					</div>
 				</div>
 				<!--right img-->
 				<div class="column">
 					<img src="../Images/htmlproject2.jpg" alt="Ghost Doggie">
 					<div>
-						<h3>Submitted by: Don el Dog</h3>
+						<h3>Submitted by: Sir Fluffington</h3>
 					</div>
 				</div>
 			</div>
@@ -177,37 +172,36 @@
 				<div class="column">
 					<img src="../Images/htmlproject3.jpg" alt="Pretty in Pink">
 					<div>
-						<h3>Submitted by: Lolita</h3>
+						<h3>Submitted by: Thor</h3>
 					</div>
 				</div>
 				<!--right img-->
 				<div class="column">
 					<img src="../Images/htmlproject4.jpg" alt="Summer Dress">
 					<div>
-						<h3>Submitted by: Bo Peep</h3>
+						<h3>Submitted by: Nala</h3>
 					</div>
 				</div>
 			</div>
 			<!--END photo container 2-->
 		</section>
-		<!--END pictures section-->
+		<!--END ROWS & 2 COLUMNS-->
 
 		<!--BLOCKQUOTE TAG-->
 		<div>
 			<style>
-				div blockquote {
-					margin: 20px auto; /*centers the element on the page with margin on top and bottom*/
-				}
 				blockquote {
-				padding: 10px 15px; /*padding to top/bottom and left/right*/
-				border-radius: 20px;
-				border: 3px solid silver;
-				box-shadow: inset -3px -3px 10px gray, inset 3px 3px 10px lavender;
-				font-family: cursive ;
-				width: fit-content;
+					margin: 20px auto; /*centers the element on the page with margin on top and bottom*/
+					padding: 10px 15px; /*Padding to top/bottom and left/right */
+					width: fit-content;
+					border-radius: 20px;
+					border: 3px solid silver;
+					box-shadow: inset -3px -3px 10px gray, inset 3px 3px 10px lavender;
+					font-family: cursive ;
 				}
 			</style>
 			<div>
+				<h1>Blockquote element</h1>
 				<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
 					“The bridge will only take you halfway there, to those mysterious lands you long to see. 
 					<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
@@ -221,56 +215,15 @@
 		<!--END BLOCKQUOTE TAG-->
 		
 		<!--EMBED VIDEO-->
+		<h1>Embed a (YouTube) Video</h1>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/uD4izuDMUQA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 		</iframe>
 		<!--END EMBED VIDEO-->
 		
 		<!--TABLE-->
-		<style>
-			table {
-				border: 3px solid purple;
-				width: 100%;
-				box-shadow: 2px 2px 10px magenta, -2px -2px 10px pink;
-			}
-			td:hover {
-				background-color: rgba(0,0,0,.3);
-				color: blue;
-				box-shadow: 2px 2px 10px yellow;
-			}
-			tr th {
-				background-color: #D1A1FC;
-				color: white;
-				font-weight: bold;
-				font-variant: small-caps;
-			}
-			tr td {
-				background-color:;
-				color:black;
-				text-align: center;
-			}
-			td:nth-of-type(1) {
-				font-weight: bold;
-			}
-			#column1 {
-				width: ;
-				background-color: palegoldenrod;
-				font-weight: bold;
-			}
-			#column2 {
-				width:;
-				background-color: palegreen;
-			}
-			#column3 {
-				width:;
-				background-color: paleturquoise;
-			}
-			#column4 {
-				width:;
-				background-color: rgb(241, 196, 211);
-			}			
-		</style>
+		<h1>Tables</h1>
 		<table>
-			<colgroup>
+			<colgroup> <!--Allows each row to be styled by referencing it's id-->
 				<col id="column1">
 				<col id="column2">
 				<col id="column3">
@@ -339,11 +292,22 @@
 		<!--END LISTS-->
 
 		<!--FORM AND INPUTS-->
-		<form action="" method="get">
-			First name: <input type="text" name="First name"><br>
-			Last name: <input type="text" name="Last name"><br>
-			<input type="submit" value="Submit">
-		</form>
+		<h1>Forms and Inputs</h1>
+		<p><a href="https://www.w3schools.com/html/html_forms.asp">HTML Forms</a> and <a href="https://www.w3schools.com/html/html_form_input_types.asp">Inputs</a></p>
+		<div class="input-container">
+			<h2>Form:</h2>
+			<form name="formName" action="" method="post" onsubmit="return validateForm()">
+				<!--Preceed input field with text...-->
+				First name: <input type="text" name="First Name">
+				<br>Last name:<input type="text" name="Last Name">
+				<br><input type="email" name="Email" placeholder="Enter your email"> 
+				<!--...or use placeholder-->
+				<br><input type="tel" name="Phone Number" placeholder="Enter your phone number">
+				<div class="input-submit">
+					<input type="submit" value="Submit"> <!--The submit button must be within the <form> element or the function validateForm() will not work properly-->
+				</div>
+			</form>
+		</div>
 		<!--END FORM AND INPUTS-->
 
 		
@@ -377,11 +341,6 @@
 	
 		<!--ANIMATED BOXES DEMO-->
 		<style>
-			.animation1 h1 {
-			color: rgba(0, 141, 165,1);
-			margin-left: 100px;
-			text-shadow: 1px .5px 4px rgba(0,0,0,.6);
-			}
 			.container {
 				width:450px;
 				height: 450px;
@@ -463,20 +422,16 @@
 			<div>
 				<h1>CSS Animation Demo</h1>
 			</div>
-
 			<div class="container">
 				<div class="squares">
 					<p>Box 1</p>
 				</div>
-
 				<div class="squares">
 					<p>Box 2</p>
 				</div>
-
 				<div class="squares">
 					<p>Box 3</p>
 				</div>
-
 				<div class="squares">
 					<p>Box 4</p>
 				</div>
@@ -487,7 +442,7 @@
 		<!--OPTGROUP TAG FOR CONFIGURABLE DROPDOWN LIST-->
 		<div>
 			<div>
-				<h2>Optgroup tag for configurable dropdown list:</h2>
+				<h1>Optgroup tag for configurable dropdown list:</h1>
 				<form action="/action_page.php">
 					<label for="Inventory Items">Choose a category of items:</label>
 					<select name="Inventory" id="inventory">
@@ -501,8 +456,6 @@
 							<option value="Outerwear">Outerwe</option>
 						</optgroup>
 					</select>
-					<br><br>
-					<input type="submit" value="Submit">
 				</form>
 			</div>
 		</div>

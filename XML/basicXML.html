@@ -61,7 +61,7 @@
 
         //create a text string
         var employees=          //Below, John Birch is at index [0], Shirley Temple [1], and so on.
-            "<employees>"
+            "<employees>" +
                 "<employee>" +
                     "<name>John Birch</name>" +
                     "<salary>56000</salary>" +
@@ -79,7 +79,7 @@
         XML_Employees_Object = XML_Parser2.parseFromString(employees,"text/xml");
 
         document.getElementById("XML_Employees_Example").innerHTML = 
-            XML_Employees_Object.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            XML_Employees_Object.getElementsByTagName("name")[1].childNodes[0].nodeValue;
     </script>
     <!--END XML ARRAY SCRIPT-->
 

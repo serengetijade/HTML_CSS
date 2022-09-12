@@ -98,9 +98,10 @@ h1 {
 
 @keyframes animation2 {
     from {
-        transform: translateX();
+        transform: translateX(0pdx);
     }
     to {
         transform: translateX(400px);
+        background-color: darkblue;
     }
 }

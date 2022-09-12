@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/51/51337.png?w=360">
+	<title>Basic XML</Title>
+</head>
+<body>
+	<main>
+        <!--BASIC XML-->
+        <div>
+            <h1>Basic XML:</h1>
+            <p>Use XML to create  an object, with various aspects...</p>
+            <img src="https://www.commonsensemedia.org/sites/default/files/styles/ratio_16_9_small/public/screenshots/csm-movie/bravetoas.jpg">
+            <p id="XML_Example"></p>
+        </div>
+        <!--END BASIC XML-->
+
+        <!--XML ARRAY-->
+        <div>
+            <h1>Use XML to represent objects in an array</h1>
+            <p>Example: Employees</p>
+            <p id="XML_Employees_Example">&nbsp;</p>
+        </div>
+        <!--END XML ARRAY-->
+    </main>
+
+
+    <!--BASIC XML SCRIPT-->
+    <script>
+        var XML_Parser, XML_Document;   //instantiates the variables
+        
+        //create an XML DOM parser
+        XML_Parser = new DOMParser();
+        
+        //create a text string
+        var Movie="<movie>" +
+            "<title>The Brave Little Toatster\'s Big Adventure</title>" +
+            "<director>Jerry Rees</director>" + 
+            "<starring>Deanna Oliver</starring>" +
+            "<year>1987</year>" +
+            "</movie>";
+
+        //create a new XML DOM object using the text string
+        XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
+
+        document.getElementById("XML_Example").innerHTML = XML_Document.getElementsByTagName("title")[0].childNodes[0].nodeValue +
+        "<br>Directed by: " + XML_Document.getElementsByTagName("director")[0].childNodes[0].nodeValue;     
+        //.nodeValue returns the value at index 0 (the #0 child node of <title> or <director> tag). ("tagName")[0] tells the computer to look at the index #0 of that TagName.
+    </script>
+    <!--END BASIC XML SCRIPT-->
+
+    <!--XML ARRAY SCRIPT-->
+    <script>
+        //Instantiate a new variable
+        var XML_Parser2, XML_Employees_Object;
+
+        //create and XML DOM parser
+        XML_Parser2 = new DOMParser();
+
+        //create a text string
+        var employees=          //Below, John Birch is at index [0], Shirley Temple [1], and so on.
+            "<employees>"
+                "<employee>" +
+                    "<name>John Birch</name>" +
+                    "<salary>56000</salary>" +
+                    "<age>44</age>"+
+                "</employee>" + 
+                //HOW DO I CREATE MULTIPLE ARRAY OBJECTS???? IT WON'T WORK WHEN I TRY TO CHANGE getElementsByTagName TO ("name")[1]
+                "<employee>" +
+                    "<name>Shirley Temple</name>" +
+                    "<salary>95000</salary>" +
+                    "<age>8</age>" +
+                "</employee>" +
+            "</employees>";
+        
+        //Create a new XML DOM objecgt using the text string
+        XML_Employees_Object = XML_Parser2.parseFromString(employees,"text/xml");
+
+        document.getElementById("XML_Employees_Example").innerHTML = 
+            XML_Employees_Object.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    </script>
+    <!--END XML ARRAY SCRIPT-->
+
+
+
+</body>
+</html>

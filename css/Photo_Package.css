@@ -3,6 +3,10 @@
     text-shadow: 3px 3px 8px rgba(0,0,0,.5);
     text-align: center;
 }
+/*SCALE A PHOTO TO FIT IT'S PARENT CONTAINER*/
+/*height: 100%;   these three properties scale an image to fit it's parent container*/
+/*width: 100%;    these three properties scale an image to fit it's parent container*/
+/*object-fit: cover; these three properties scale an image to fit it's parent container*/
 
 /*PHOTO CONTAINER*/
 .flex-container {

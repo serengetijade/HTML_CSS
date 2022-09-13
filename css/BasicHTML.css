@@ -14,6 +14,8 @@ a:link, a:visited {     /*Change the color of all links and those that have been
     color: greenyellow;
 }
 /*END GENERAL STYLES*/
+
+/*HEADER*/
 header {
     position: absolute; /*These three commands fit the element, in this case header, flush with the view of the page*/
     top: 0;             /*These three commands fit the element, in this case header, flush with the view of the page*/
@@ -36,6 +38,14 @@ header p {
 main {
     margin-top: 425px; /*Move the content down to below the header*/
 }
+/*END HEADER*/
+
+/*IMAGES*/
+/*SCALE A PHOTO TO FIT IT'S PARENT CONTAINER*/
+/*height: 100%;   these three properties scale an image to fit it's parent container*/
+/*width: 100%;    these three properties scale an image to fit it's parent container*/
+/*object-fit: cover; these three properties scale an image to fit it's parent container*/
+/*END IMAGES*/
 
 /*TABLE*/
 table {

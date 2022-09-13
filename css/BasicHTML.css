@@ -1,4 +1,7 @@
 /*GENERAL STYLES*/
+html {
+    scroll-behavior: smooth; /*smooths the scrolling for the page (or it can be used on a specific element)*/
+}
 body {
     opacity: 1;   /*Fade effect when loading part 1.1: when the event listenter occurs and the fade-out class is removed, this makes the document visible*/
     transition: 2s opacity; /*Fade effect part 1.2*/

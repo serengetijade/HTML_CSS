@@ -24,11 +24,17 @@
 		<div class="wrap">
 			<div class="menu-container">
 				<ul class="menu">
-					<li>Home</li> 
-					<li>About</li>
+					<a href="#fonts"><li>Fonts</li></a>
+					<li><a href="#basicimage">Images</a>
+						<ul class="submenu">
+							<a href="#img-grid"><li>Rows & Columns</li></a>
+							<a href="#videos"><li>Videos</li></a>
+						</ul>
+					</li></a>
+					
 					<li>Portfolio
 						<ul class="submenu">
-							<li>Page 1</li>
+							<a href="#basicTable"><li>Table</li></a>
 							<li>Page 2</li>
 							<li>Page 3</li>
 							<li>Page 4</li>
@@ -64,7 +70,7 @@
 	<main>
 		<!--FONT AND TEXT ELEMENTS-->
 		<!--ID and HTML FONTS-->
-		<h1>HTML Font and Text Elements</h1>
+		<h1 id="fonts">HTML Font and Text Elements</h1>
 		<p id="paragraph1"><font face= "Roboto" size="6">Paragraph 1: <font color="#b53aa1" size="4">Hex Color #b53aa1</font><font color="darkcyan" size="2"> "darkcyan"</font></font></p>
 		
 		<!--HTML TEXT ELEMENTS-->
@@ -98,24 +104,54 @@
 		<p>Implicit Link: <a href="../Images/dog.jpg">Check out this fluff!</a>
 		<br>
 		Explicit Link: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBpH8pvuU7jrU289AymDtwgOUE4-uO1es0w&usqp=CAU">Do not disturb</a>
-		</p>	
+		</p>
+		
+		<!--BLOCKQUOTE TAG-->
+		<div>
+			<style>
+				blockquote {
+					margin: 20px auto; /*centers the element on the page with margin on top and bottom*/
+					padding: 10px 15px; /*Padding to top/bottom and left/right */
+					width: fit-content;
+					border-radius: 20px;
+					border: 3px solid silver;
+					box-shadow: inset -3px -3px 10px gray, inset 3px 3px 10px lavender;
+					font-family: cursive ;
+				}
+			</style>
+			<div>
+				<h1>Blockquote element</h1>
+				<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
+					“The bridge will only take you halfway there, to those mysterious lands you long to see. 
+					<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
+					<br>So come and walk awhile with me and share the twisting trails and wondrous worlds I've known. 
+					<br>But this bridge will only take you halfway there. The last few steps you have to take alone.”
+					<br>
+					<br>― Shel Silverstein
+				</blockquote>
+			</div>
+		</div>
+		<!--END BLOCKQUOTE TAG-->
 
 		<!--IMAGE-->
-		<h1>Images</h1>
-		<style>
-			#randomimage {
-				margin: 20px auto; /*Center block elements- img is a block element by default*/
-				width: fit-content; /*Because of the hover effect, you want to minimize the width so when you're not hovering, it goes back to normal*/
-				transition: transform .5s; /*The transform animation*/
-				transform-origin: 50% 50%; /*"Dead on" transform*/
-			}
-			#randomimage:hover {
-				transform: scale(1.5); 
-				filter: invert(100%) blur(0px);
-			}
-		</style>
-		<div id="randomimage">
-			<img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1_Ju2SLrbL42M59kkd9ufsHw.jpg?auto=format&q=60&fit=max&w=930" alt="The Golden Ratio in nature" height="300px">
+		<div id="basicimage">
+			<h1>Images</h1>
+			<style>
+				#randomimage {
+					margin: 20px auto; /*Center block elements- img is a block element by default*/
+					width: fit-content; /*Because of the hover effect, you want to minimize the width so when you're not hovering, it goes back to normal*/
+					transition: transform .5s; /*The transform animation*/
+					transform-origin: 50% 50%; /*"Dead on" transform*/
+				}
+				#randomimage:hover {
+					transform: scale(1.5); 
+					filter: invert(100%) blur(0px);
+				}
+			</style>
+
+			<div id="randomimage">
+				<img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/08/1_Ju2SLrbL42M59kkd9ufsHw.jpg?auto=format&q=60&fit=max&w=930" alt="The Golden Ratio in nature" height="300px">
+			</div>
 		</div>
 		<!--END IMAGE-->
 
@@ -186,80 +222,57 @@
 			<!--END photo container 2-->
 		</section>
 		<!--END ROWS & 2 COLUMNS-->
-
-		<!--BLOCKQUOTE TAG-->
-		<div>
-			<style>
-				blockquote {
-					margin: 20px auto; /*centers the element on the page with margin on top and bottom*/
-					padding: 10px 15px; /*Padding to top/bottom and left/right */
-					width: fit-content;
-					border-radius: 20px;
-					border: 3px solid silver;
-					box-shadow: inset -3px -3px 10px gray, inset 3px 3px 10px lavender;
-					font-family: cursive ;
-				}
-			</style>
-			<div>
-				<h1>Blockquote element</h1>
-				<blockquote cite="https://www.goodreads.com/quotes/144748-the-bridge-will-only-take-you-halfway-there-to-those">
-					“The bridge will only take you halfway there, to those mysterious lands you long to see. 
-					<br>Through gypsy camps and swirling Arab fair, and moonlit woods where unicorns run free. 
-					<br>So come and walk awhile with me and share the twisting trails and wondrous worlds I've known. 
-					<br>But this bridge will only take you halfway there. The last few steps you have to take alone.”
-					<br>
-					<br>― Shel Silverstein
-				</blockquote>
-			</div>
-		</div>
-		<!--END BLOCKQUOTE TAG-->
 		
 		<!--EMBED VIDEO-->
-		<h1>Embed a (YouTube) Video</h1>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/uD4izuDMUQA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-		</iframe>
+		<div id="videos">
+			<h1>Embed a (YouTube) Video</h1>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/uD4izuDMUQA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
+		</div>
 		<!--END EMBED VIDEO-->
 		
 		<!--TABLE-->
-		<h1>Tables</h1>
-		<table>
-			<colgroup> <!--Allows each row to be styled by referencing it's id-->
-				<col id="column1">
-				<col id="column2">
-				<col id="column3">
-				<col id="column4">
-			</colgroup>
-			<tr>
-				<th>Fruit</th>
-				<th>Season</th>
-				<th>Where to Pick</th>
-				<th>Description</th>
-			</tr>
-			<tr>
-				<td>Blueberry</td>
-				<td>July</td>
-				<td>Frankton Rd, Hood River</td>
-				<td>Perfect for blemon pies!</td>
-			</tr>
-			<tr>
-				<td>Raspberry</td>
-				<td>June</td>
-				<td>Gorge White House, Hood River</td>
-				<td>Early summer treats.</td>
-			</tr>
-			<tr>
-				<td>Blackberry</td>
-				<td>August</td>
-				<td>Literally everywhere</td>
-				<td>Wear long sleves when picking!</td>
-			</tr>
-			<tr>
-				<td>Cherry</td>
-				<td>June</td>
-				<td>Mosier or Dell</td>
-				<td>My favorite!</td>
-			</tr>
-		</table>
+		<div id="basicTable">			
+			<h1>Tables</h1>
+			<table>
+				<colgroup> <!--Allows each row to be styled by referencing it's id-->
+					<col id="column1">
+					<col id="column2">
+					<col id="column3">
+					<col id="column4">
+				</colgroup>
+				<tr>
+					<th>Fruit</th>
+					<th>Season</th>
+					<th>Where to Pick</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Blueberry</td>
+					<td>July</td>
+					<td>Frankton Rd, Hood River</td>
+					<td>Perfect for blemon pies!</td>
+				</tr>
+				<tr>
+					<td>Raspberry</td>
+					<td>June</td>
+					<td>Gorge White House, Hood River</td>
+					<td>Early summer treats.</td>
+				</tr>
+				<tr>
+					<td>Blackberry</td>
+					<td>August</td>
+					<td>Literally everywhere</td>
+					<td>Wear long sleves when picking!</td>
+				</tr>
+				<tr>
+					<td>Cherry</td>
+					<td>June</td>
+					<td>Mosier or Dell</td>
+					<td>My favorite!</td>
+				</tr>
+			</table>
+		</div>
 		<!--END TABLE-->
 		
 		<!--LISTS-->

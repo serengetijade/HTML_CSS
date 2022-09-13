@@ -1,10 +1,6 @@
 /*Stylesheet for BasicCSSDemo1_Animation.html*/
-body {
-    background-color:rgba(245, 245, 220, 0.75);
-}
-h1 {
+header h1 {
     color: rgba(0, 141, 165,1);
-    margin-left: 100px;
     text-shadow: 1px .5px 4px rgba(0,0,0,.6);
 }
 .container {
@@ -86,22 +82,44 @@ h1 {
 /*END ANIMATION:SQUARES*/
 
 /*ANIMATION 2*/
-.container2  {
+.container2  img{
     position: relative;
     animation-name: animation2;
-    animation-duration: .75s;
+    animation-duration: 2s;
     animation-timing-function: linear;
-    animation-delay: ;
-    animation-iteration-count: 6;
+    animation-delay: .5s;
+    animation-iteration-count: 4;
     animation-direction: alternate;
 }
 
 @keyframes animation2 {
     from {
-        transform: translateX(0pdx);
+        transform: translateX(0vw);
     }
     to {
-        transform: translateX(400px);
-        background-color: darkblue;
+        transform: translateX(50vw);
     }
 }
+/*END ANIMATION 2*/
+
+/*ANIMATION3 ZOOM IN AND OUT*/
+.container3 {
+    text-align: center;
+}
+.container3 img {
+    height: 400px;
+    animation: zoominout 15s forwards;
+}
+
+@keyframes zoominout {
+    0% {
+        transform: scale(1,1); /*The initial size is 1*/
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1,1); /*The initial size is 1*/
+    }
+}
+/*END ANIMATION3 ZOOM IN AND OUT*/

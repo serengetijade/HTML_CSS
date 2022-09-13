@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/x-icon" href="../Images/Icons/">		
+	<link rel="stylesheet" type="text/css" href="css/ToDo-App.css" >	
+	<script src="js/ToDo-App.js" defer></script> 					                        <!--Source JavaScript file-->
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> 	<!--Source jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>		<!--Source React-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>	<!--Source React DOM-->
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>				<!--Source JSX-->
+	<title>Header with Banner</Title>
+</head>
+<body>
+    <style>
+        /*HEADER*/
+        header {
+            position: absolute; /*The element is positioned relative to its first positioned (not static) ancestor element, in this case, the body*/
+            top: 0;             /*Sets element to the very top of the page*/
+            left: 0;            /*Sets element to the very left of the page*/
+            height: 400px;
+            width: 100%;        /*Ensures that the img spans the entire div*/
+            background-image: url("https://images.unsplash.com/photo-1542349314-587b18ea1c2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ZSUyMHNreXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+            background-size: cover;  
+            background-position: center;  
+        }   
+        .header {
+            position: absolute;
+            top: 30%;           /*Adjust margin to move the element around*/
+            width: 100%;        /*Must declare this value in order to use text-align */
+            text-align: center;
+        }
+        /*END HEADER*/
+    </style>
+    <header>
+        <div class="header">
+            <h1>Page Title</h1>
+            <h2>description or whatever</h2>
+        </div>
+    </header>

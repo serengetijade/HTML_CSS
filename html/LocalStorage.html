@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Local Storage</Title>
+</head>
+<body>
+    <h1>Window localStorage</h1>
+    <p>Set and retrieve localStorage name/value pair with <a href="https://www.w3schools.com/jsref/prop_win_localstorage.asp">localStorage()</a></p>
+    <p id="targetElement"></p>
+
+    <script>
+        localStorage.setItem("Name","Zuzu");    //Store data using KVP system
+
+        document.getElementById("targetElement").innerHTML = localStorage.getItem("Name");  //get a value based on the key used
+    </script>
+
+</body>
+</html>	

@@ -19,7 +19,7 @@ In addition to the projects, there is a small code library that is useful for re
 - [Basic Page](https://github.com/serengetijade/HTMLandCSS/blob/main/html/BasicPage.html) This is a very basic page demonstrating a simple layout.
 - [Template](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Template.html) Here is an empty template that is ready to be customized with font, css, javascript, and other sources. 
 - [Animation](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Animation1_HoverSlide.html) An example of keyframes animation.
-- [Call a JavaScript Function] (https://github.com/serengetijade/HTMLandCSS/blob/main/html/CallJavaScriptFunction.html) An example of how to call a JavaScript Function from another document. 
+- [Call a JavaScript Function](https://github.com/serengetijade/HTMLandCSS/blob/main/html/CallJavaScriptFunction.html) An example of how to call a JavaScript Function from another document. 
 - [Details, Article, Section, and Datetime Tags](https://github.com/serengetijade/HTMLandCSS/blob/main/html/DetailsTimeBookmarks.html)
 - [Header Template 1](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Header1-Background.html)
 - [Header Template 2](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Header2-Image.html)

@@ -27,6 +27,7 @@ In addition to the projects, there is a small code library that is useful for re
 - [Menus with Dropdowns](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Menu_Rollover.html) Expand menu options on mouse rollover.
 - [Photo Container Templates](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Photo_Package.html)
 - [Tables and Lists](https://github.com/serengetijade/HTMLandCSS/blob/main/html/Table_and_Lists.html)
+- [XML Example](https://github.com/serengetijade/HTMLandCSS/blob/main/html/XML.html)
 
 >“Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.”
 —Stephen Hawking, Theoretical Physicist, Cosmologist, Author

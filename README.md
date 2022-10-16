@@ -1,5 +1,5 @@
 # HTML-CSS-Projects
-This repository is for HTML, CSS, and related projects.
+This repository is for HTML, CSS, and related projects. Some basic JavaScript is included, but please see my [JavaScript Directory](https://github.com/serengetijade/JavaScript) for more. 
 
 ## PROJECTS:
 - [CraftBox Inventory Website](https://github.com/serengetijade/HTMLandCSS/tree/main/projects/HTMLandCSSWebsite)

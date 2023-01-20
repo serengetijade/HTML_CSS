@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+    <!-- CSP is applied to the server, but it can be inplemented using meta tags:  -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+        form-action https://targetURLexample.com;
+        img-src https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80*; 
+        style-src ;
+        child-src 'none';
+        " />
+    <!--Syntax: 
+        http-equiv="Content-Security-Policy" set up a CSP
+        content="" declare the CSP directives
+    -->
+    <title>CSP</Title>	
+</head>
+<body>
+	<header></header>
+	<nav></nav>
+	<main>
+        <h1>Content Security Policy</h1>
+        <p>The CSP  is an ASCII string consisting of a semicolon-delimited series of serialized directives.</p>
+        <p>A <strong>directive</strong> is a name / value pair that controls a specific behavior.</p>
+        <ul>
+            <li><a href="https://www.w3.org/TR/CSP3/#serialized-directive">What is a directives?</a></li>
+            <li><a href="https://www.w3.org/TR/CSP3/#csp-directives">List of directives</a></li>
+        </ul>
+        <form action="">
+            <input type="text" name="firstName" value="Username">
+            <input type="text" name="lastName" value="Password">
+            <input type="submit">
+        </form>
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80" />
+    </main>
+</body>
+</html>	
+

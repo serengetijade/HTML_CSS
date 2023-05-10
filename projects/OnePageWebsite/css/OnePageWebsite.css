@@ -90,7 +90,7 @@ header h1 {
 }
 .gallery p {
 }
-img {
+#communitytable img {
 	height: 200px;
 }
 #communitytable .row {
@@ -201,6 +201,7 @@ img {
 }
 img.lightboxthumb {
   	opacity: 0.6;
+	width: 100%;
 }
 .active, .lightboxthumb:hover {
   	opacity: 1;

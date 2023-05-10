@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>HTML Template</Title>
+	<style>
+		html {
+			scroll-behavior: smooth; /*specifies whether to smoothly animate the scroll position, instead of a straight jump*/
+			box-sizing: border-box;  /*include the padding and border in an element's total width and height. Default value: content-box*/
+		}
+		body{
+            margin: 0; /*Remove the default margin around body-level elements, allow any banner to span entire vw*/
+            text-align: center;
+        }
+        @keyframes zoomAnimation {
+            0% {
+                transform: scale(1,1);
+            }
+            50% { 
+                transform: scale(1.25, 1.25);
+            }
+            100% {
+                transform: scale(1,1);
+            }
+        }
+        img{
+            /*Syntax: animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /*animation: zoomAnimation 10s linear 0s infinite forwards none;*/
+            animation: zoomAnimation 10s forwards infinite;
+        }
+        div{
+            overflow: hidden;  /*Contain the scaled image*/
+        }
+	</style> 	<!--If not using a .css stylesheet, put style element at the top of the document-->
+</head>
+<body>
+	<main>
+        <div>
+            <img src="../Images/htmlproject3.jpg" alt="Cute Widdle Kitten">
+        </div>
+        
+        <p>To read more about animation properties, read the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">mozilla docs</a>.</p>
+    </main>
+</body>
+</html>	
